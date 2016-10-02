@@ -1,0 +1,11 @@
+[user]
+	name = Léo Sumi
+	email = pro.leosumi@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk

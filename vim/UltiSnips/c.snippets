@@ -1,0 +1,44 @@
+# globals
+
+global !p
+def fileName():
+    return snip.basename
+endglobal
+
+global !p
+def printFileName():
+    snip.rv = fileName()
+endglobal
+
+# Snippets
+
+snippet headerFile "h file generator" 
+//
+// \file `!p printFileName()`.h
+// Author Léo Sumi (pro.leosumi@gmail.com)
+//
+// Copyright (c) `date +%Y` Léo Sumi
+//
+
+#ifndef `!v substitute(vim_snippets#Filename('$1_H','FileName'),'.*','\U&\E','')`
+#define `!v substitute(vim_snippets#Filename('$1_H','FileName'),'.*','\U&\E','')`
+
+$0
+
+#endif // `!v substitute(vim_snippets#Filename('$1_H','FileName'),'.*','\U&\E','')`
+
+// vi: sts=2 sw=2 expandtab
+endsnippet
+
+snippet sourceFile "c file generator"
+//
+// \file `!p printFileName()`.c
+// Author Léo Sumi (pro.leosumi@gmail.com)
+//
+// Copyright (c) `date +%Y` Léo Sumi
+//
+
+$0
+
+// vi: sts=2 sw=2 expandtab
+endsnippet

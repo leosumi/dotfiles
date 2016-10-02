@@ -1,0 +1,87 @@
+# packages.list file
+# This file contains the packuages to install
+# lines with # are comment
+
+# X system
+xorg
+xfce4
+desktop-base
+
+# Window manager
+#awesome
+#openbox
+
+# Terminal emulator
+#xfce4-terminal
+#roxterm
+
+# keyboard
+xcape
+
+# Sandbox
+firejail
+# Not in jessie
+
+# web
+firefox
+chromium-browser
+# firefox -> iceweasel in jessie
+
+# edit
+git
+tmux
+#tmate
+vim
+emacs
+#vagrant
+exuberant-ctags
+powerline
+indent
+
+# Dev
+build-essential
+
+# C++
+gcc
+cmake
+libgtest-dev
+libtclap-dev
+doxygen
+gdb
+valgrind
+cppcheck
+vera++
+
+# latex
+texlive
+texlive-lang-french
+texlive-humanities
+
+# R
+r-base
+r-base-dev
+
+# tools
+htop
+curl
+#pass
+tree
+upgrade-system
+ssh
+#cups
+keepassx
+xdotool
+
+# music
+easytag
+abcde
+clementine
+lilypond
+frescobaldi
+#youtube-dl
+#libav-tools
+#mpd mpc ncmpcpp (cmus)
+
+# utility
+libreoffice
+blender

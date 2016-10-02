@@ -1,0 +1,89 @@
+#! /bin/bash
+
+function ask_new_session
+{
+  read -p "New session name: " session_name
+  tmux new -s "$session_name"
+}
+
+function select_session
+{
+  sessions=($(tmux list-sessions -F "#S" 2>/dev/null))
+  nb_session=${#sessions[@]}
+
+  if [ $nb_session -eq 0 ]; then
+    ask_new_session
+  elif [ $nb_session -eq 1 ]; then
+    # Togle in-out of tmux
+    if [ "$TMUX" ]; then
+      tmux detach
+    else
+      tmux attach-session -t ${sessions[0]}
+    fi
+  else
+    PS3="Tmux - Choose your session: "
+    echo "Available sessions"
+    echo "------------------"
+
+    # Options available
+    options=(${sessions[@]})
+    if [ "$TMUX" ]; then
+      options+=("Detach")
+    else
+      options+=("New session")
+    fi
+
+    select opt in "${options[@]}"
+    do
+      case $opt in
+        "Detach")
+          tmux detach
+          break
+          ;;
+        "New session")
+          ask_new_session
+          break
+          ;;
+        *)
+          # it will switch session if already inside a tmux session
+          if [ "$TMUX" ]; then
+            tmux switch -t $opt
+            break
+          fi
+          tmux attach-session -t $opt
+          break
+          ;;
+      esac
+    done
+  fi
+}
+
+function create_session
+{
+  # We can create a tmux session only freom outside tmux
+  if [ -z "$TMUX" ]; then
+    tmux new -s $1
+  else
+    echo "Can not create a tmux session from inside tmux"
+  fi
+}
+
+case "$1" in
+  # Create a tmux session
+  -c)
+    create_session $2
+    ;;
+  # Detach a tmux session
+  -d)
+    tmux detach
+    ;;
+  # List tmux sessions
+  -l)
+    tmux list-sessions -F "#S" 2>/dev/null
+    ;;
+  # Select a session
+  *)
+    select_session
+    ;;
+esac
+

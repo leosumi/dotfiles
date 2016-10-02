@@ -1,0 +1,29 @@
+# Some useful aliases
+# The .bashrc file source this file
+
+alias file='file -z'
+alias mkdir='mkdir -p'
+
+# tmux aliases
+alias tns='tmux new-session -s'
+alias ta='tmux attach'
+alias tat='tmux attach -t'
+alias tls='tmux ls'
+
+# vim aliases
+alias e='vim --remote'
+alias vi='vim'
+alias vim-default='vim -u NONE -N'
+
+# emacs aliases
+alias emacs='emacs &'
+#alias emacs='emacs --no-window-system'
+
+# Internet in a sandbox
+# Use chromium / brave for untrusted site
+# Use firefox for everyday search
+# Use fox for secure search DO NOT TRUST AD-ONS
+alias brave='brave > /dev/null &'
+alias firefox='firejail firefox > /dev/null &'
+alias chromium='firejail chromium-browser > /dev/null 2>&1 &'
+alias fox='firejail --private firefox > /dev/null &'

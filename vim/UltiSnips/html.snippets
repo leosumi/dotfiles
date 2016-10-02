@@ -1,0 +1,204 @@
+snippet t "html tag" 
+<${1}>${0}</${1}>
+endsnippet
+
+snippet T "html Tag" 
+<$1>
+  $0
+</$1>
+endsnippet
+
+snippet todo "TODO reminder" b
+<!-- TODO: `echo $USER` ${1:description} --> 
+endsnippet
+
+# div and span
+
+snippet div "div" b
+<div>
+  $0
+</div>
+endsnippet
+
+snippet span "span"
+<span>$0</span>
+endsnippet
+
+# Text
+
+snippet p "paragraph" b
+<p>$0</p>
+endsnippet
+
+snippet br "break"
+<br />
+endsnippet
+
+snippet h1 "h1 title" b
+<h1>$0</h1>
+endsnippet
+
+snippet h2 "h2 title" b
+<h2>$0</h2>
+endsnippet
+
+snippet h3 "h3 title" b
+<h3>$0</h3>
+endsnippet
+
+snippet h4 "h4 title" b
+<h4>$0</h4>
+endsnippet
+
+snippet h5 "h5 title" b
+<h5>$0</h5>
+endsnippet
+
+snippet h6 "h6 title" b
+<h6>$0</h6>
+endsnippet
+
+snippet em "emphasis"
+<em>$0</em>
+endsnippet
+
+snippet strong "strong"
+<strong>$0</strong>
+endsnippet
+
+snippet mark "mark" 
+<mark>$0</mark>
+endsnippet
+
+# List
+
+snippet li "list element" b
+<li>$0</li>
+endsnippet
+
+snippet ul "unordered list" b
+<ul>
+  <li>$0</li>
+</ul>
+endsnippet
+
+snippet ol "ordered list" b
+<ol>
+  <li>$0</li>
+</ol>
+endsnippet
+
+snippet dl "description list" b
+<dl>
+  <dt>$1</dt>
+  <dd>$2</dd>
+</dl>
+endsnippet
+
+snippet dt "description list term" b
+<dt>$0</dt>
+endsnippet
+
+snippet dd "term description" b
+<dd>$0</dd>
+endsnippet
+
+# Hypertext
+
+snippet a "link"
+<a href="$1">$0</a>
+endsnippet
+
+# Image
+
+snippet img "image" 
+<img src="$1" alt="$2" />
+endsnippet
+
+snippet figure "figure"
+<figure>
+    <figcaption>$0</figcaption>
+</figure>
+endsnippet
+
+snippet caption "caption" b
+<caption>$0</caption>
+endsnippet
+
+# Table
+
+snippet simpleTable "simple table" b
+<table>
+  <caption>$1</caption>
+
+  <tr>
+    <th>$2</th>
+  </tr>
+
+  <tr>
+    <td>$0</td>
+  </tr>
+</table>
+endsnippet
+
+snippet complexTable "complexe table" b
+<table>
+  <caption>$1</caption>
+
+  <thead>
+    <tr>
+      <th>$2</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <th>$3</th>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <td>$0</td>
+    </tr>
+  </tbody>
+</table>
+endsnippet
+
+snippet table "table" b
+<table>
+  $0
+</table>
+endsnippet
+
+snippet thead "table head" b
+<thead>
+  $0
+</thead>
+endsnippet
+
+snippet tfoot "table foot" b
+<tfoot>
+  $0
+</tfoot>
+endsnippet
+
+snippet tbody "table body" b
+<tbody>
+  $0
+</tbody>
+endsnippet
+
+snippet tr "table row" b
+<tr>
+  $0
+</tr>
+endsnippet
+
+snippet td "table cell" b
+<td>$0</td>
+endsnippet
+
+snippet th "table head" b
+<th>$0</th>
+endsnippet
