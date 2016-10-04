@@ -184,18 +184,6 @@ endif
 
 "  }}}
 
-" Wrap and textwidth {{{
-
-if has("autocmd")
-    filetype on
-    autocmd FileType text setlocal textwidth=80
-    autocmd FileType plaintext setlocal textwidth=80
-    autocmd FileType tex setlocal textwidth=80
-    autocmd FileType markdown setlocal textwidth=80
-endif
-
-"  }}}
-
 "  Visual help {{{
 
 " Show matching brackets
@@ -302,5 +290,24 @@ autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
 autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
 autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
 autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+
+"  }}}
+
+"  Writing {{{
+
+if has("autocmd")
+    filetype on
+    autocmd FileType txt call Writing()
+    autocmd FileType plaintext call Writing()
+    autocmd FileType tex call Writing()
+    autocmd FileType markdown call Writing()
+endif
+
+function Writing()
+    setlocal nonumber
+    setlocal norelativenumber
+    setlocal laststatus=0
+    setlocal textwidth=80
+endfunction
 
 "  }}}
