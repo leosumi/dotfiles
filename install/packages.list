@@ -47,6 +47,7 @@ cmake
 libgtest-dev
 libtclap-dev
 doxygen
+graphviz
 gdb
 valgrind
 cppcheck
