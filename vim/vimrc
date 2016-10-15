@@ -311,3 +311,17 @@ function Writing()
 endfunction
 
 "  }}}
+
+"  Code {{{
+
+if has("autocmd")
+    filetype on
+    autocmd FileType cpp call CppCode()
+endif
+
+function CppCode()
+    setlocal noexpandtab
+    setlocal tabstop=4
+endfunction
+
+"  }}}
