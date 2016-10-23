@@ -44,14 +44,19 @@ build-essential
 # C++
 gcc
 cmake
-libgtest-dev
-libtclap-dev
 doxygen
 graphviz
 gdb
 valgrind
 cppcheck
 vera++
+
+# C++ library
+libboost-all-dev
+# need to compile sources
+libgtest-dev
+libtclap-dev
+libsfml-dev
 
 # latex
 texlive
@@ -67,6 +72,7 @@ htop
 curl
 #pass
 tree
+# Will remove libraries
 upgrade-system
 ssh
 #cups
