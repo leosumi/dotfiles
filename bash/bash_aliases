@@ -20,10 +20,10 @@ alias emacs='emacs &'
 #alias emacs='emacs --no-window-system'
 
 # Internet in a sandbox
-# Use chromium / brave for untrusted site
-# Use firefox for everyday search
+# Use brave as the default browser
+# Use firefox or chromium for everyday use
 # Use fox for secure search DO NOT TRUST AD-ONS
 alias brave='brave > /dev/null &'
 alias firefox='firejail firefox > /dev/null &'
-alias chromium='firejail chromium-browser > /dev/null 2>&1 &'
+alias chromium='firejail chromium-browser > /dev/null &'
 alias fox='firejail --private firefox > /dev/null &'
