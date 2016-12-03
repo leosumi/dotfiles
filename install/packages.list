@@ -7,14 +7,6 @@ xorg
 xfce4
 desktop-base
 
-# Window manager
-#awesome
-#openbox
-
-# Terminal emulator
-#xfce4-terminal
-#roxterm
-
 # keyboard
 xcape
 
@@ -50,11 +42,12 @@ gdb
 valgrind
 cppcheck
 vera++
+astyle
 
 # C++ library
 libboost-all-dev
-# need to compile sources
 libgtest-dev
+# need to compile sources
 libtclap-dev
 libsfml-dev
 
@@ -72,8 +65,8 @@ htop
 curl
 #pass
 tree
-# Will remove libraries
 upgrade-system
+# Will remove libraries
 ssh
 #cups
 keepassx
@@ -85,10 +78,26 @@ abcde
 clementine
 lilypond
 frescobaldi
-#youtube-dl
-#libav-tools
-#mpd mpc ncmpcpp (cmus)
+youtube-dl
+
+# rss
+newsbeuter
+mpv
 
 # utility
 libreoffice
 blender
+vlc
+
+## Interesting stuff ##
+
+# Window manager
+# awesome, openbox
+
+# Terminal emulator
+# xfce4-terminal, roxterm
+
+# Music
+# libav-tools
+# mpd, mpc, ncmpcpp
+# cmus
