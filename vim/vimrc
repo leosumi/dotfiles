@@ -47,6 +47,9 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'reedes/vim-pencil'
  Plugin 'sirver/ultisnips'                       " snippets engine
  Plugin 'honza/vim-snippets'                     " some snippets
+ Plugin 'junegunn/goyo.vim'                      " distraction-free writing
+ Plugin 'junegunn/limelight.vim'                 " hyperfocus-writing
+ Plugin 'jceb/vim-orgmode'                       " org mode
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
