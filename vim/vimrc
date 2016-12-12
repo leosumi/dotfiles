@@ -18,6 +18,10 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'altercation/vim-colors-solarized'
  Plugin 'chriskempson/base16-vim'
  Plugin 'sunaku/xoria256.vim'
+ Plugin 'freeo/vim-kalisi'
+
+ Plugin 'vim-airline/vim-airline'                " status bar improvement
+ Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
 
 " Plugin I use
  Plugin 'scrooloose/syntastic'                   " Syntax checking hacks for vim
@@ -42,7 +46,6 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'tmhedberg/matchit'                      " extended % matching for html, latex,...
  Plugin 'Dimercel/todo-vim'                      " manage todo notes 
  Plugin 'LaTeX-Box-Team/LaTeX-Box'               " Latex toolbox
- Plugin 'bling/vim-airline'                      " status bar improvement
 "Plugin 'edkolev/tmuxline.vim'                   " status bar for tmux integration
 "Plugin 'reedes/vim-pencil'
  Plugin 'sirver/ultisnips'                       " snippets engine
@@ -130,14 +133,26 @@ if !exists("syntax_on")
     syntax on
 endif
 
+" Colorscheme
+colorscheme kalisi
+let g:airline_theme='kalisi'
+
 " Tells vim what the background color looks like (can be dark or light)
 set background=dark
 
-" Colorscheme
-colorscheme xoria256
-
 " Make the current line visible
 set cursorline
+
+function SetDarkTheme()
+  set background=dark
+endfunction
+
+function SetLightTheme()
+  set background=light
+endfunction
+
+command Dark call SetDarkTheme()
+command Light call SetLightTheme()
 
 "  }}}
 
@@ -173,9 +188,9 @@ set expandtab
 
 " Each indentation level is two spaces. Tabs are not used
 " tabstop == softtabstop == shiftwidth
-"set tabstop=2          " Set tab size (if noexpandtab)
-set softtabstop=4       " how many columns when tab is used in insert mode
-set shiftwidth=4        " how many columns text is indented with >> and <<
+set tabstop=2           " Set tab size (if noexpandtab)
+set softtabstop=2       " how many columns when tab is used in insert mode
+set shiftwidth=2        " how many columns text is indented with >> and <<
 
 if has("autocmd")
     filetype on
@@ -210,6 +225,10 @@ set smartcase
 
 " Make sure any searches /searchTerm doesn't need the \c escape character
 set ignorecase
+
+" Search down into subfolders with :find
+" Provides tab-completion for all file-related tasks
+set path+=**
 
 "  }}}
 
@@ -323,8 +342,10 @@ if has("autocmd")
 endif
 
 function CppCode()
-    setlocal noexpandtab
+    setlocal expandtab
     setlocal tabstop=4
+    setlocal softtabstop=4
+    setlocal shiftwidth=4
 endfunction
 
 "  }}}
