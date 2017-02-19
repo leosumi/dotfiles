@@ -320,7 +320,7 @@ autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 if has("autocmd")
     filetype on
     autocmd FileType txt call Writing()
-    autocmd FileType plaintext call Writing()
+    autocmd FileType plaintex call Writing()
     autocmd FileType tex call Writing()
     autocmd FileType markdown call Writing()
 endif
