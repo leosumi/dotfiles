@@ -61,6 +61,7 @@ r-base
 r-base-dev
 
 # tools
+ranger
 htop
 curl
 #pass
