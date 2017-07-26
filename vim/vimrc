@@ -1,5 +1,8 @@
 " Vimrc file
 " Create by Léo Sumi
+"
+" The configuration is set to work with code (like C++)
+" See Writing fold for plain text configuration
 
 "  Vundle {{{
 
@@ -46,6 +49,7 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'tmhedberg/matchit'                      " extended % matching for html, latex,...
  Plugin 'Dimercel/todo-vim'                      " manage todo notes 
  Plugin 'LaTeX-Box-Team/LaTeX-Box'               " Latex toolbox
+ Plugin 'xuhdev/vim-latex-live-preview'          " Latex preview
 "Plugin 'edkolev/tmuxline.vim'                   " status bar for tmux integration
 "Plugin 'reedes/vim-pencil'
  Plugin 'sirver/ultisnips'                       " snippets engine
@@ -114,6 +118,7 @@ set relativenumber
 set number
 
 " Turn word wrap off: do not break long lines
+" This is great for code but not for plain text
 set nowrap
 
 " new windows appear below and to the right
@@ -188,15 +193,12 @@ set expandtab
 
 " Each indentation level is two spaces. Tabs are not used
 " tabstop == softtabstop == shiftwidth
-set tabstop=2           " Set tab size (if noexpandtab)
-set softtabstop=2       " how many columns when tab is used in insert mode
-set shiftwidth=2        " how many columns text is indented with >> and <<
+set tabstop=4           " Set tab size (if noexpandtab)
+set softtabstop=4       " how many columns when tab is used in insert mode
+set shiftwidth=4        " how many columns text is indented with >> and <<
 
 if has("autocmd")
     filetype on
-    autocmd FileType tex setlocal softtabstop=2 shiftwidth=2
-    autocmd FileType html setlocal softtabstop=2 shiftwidth=2
-    autocmd FileType sh setlocal softtabstop=2 shiftwidth=2
     autocmd FileType make setlocal noexpandtab tabstop=4
 endif
 
@@ -316,6 +318,13 @@ autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 "  }}}
 
 "  Writing {{{
+"
+" The rules:
+" - indent is 2 spaces because there is a lot of text
+" - wrap the text to be easy to read (only visually)
+" - do not add eol if enter is not used: do not use textwidth
+" - linebreak and breakindent are awesome with wrap to cut the right way
+" - use marker to fold
 
 if has("autocmd")
     filetype on
@@ -323,29 +332,28 @@ if has("autocmd")
     autocmd FileType plaintex call Writing()
     autocmd FileType tex call Writing()
     autocmd FileType markdown call Writing()
+    autocmd FileType html call Writing()
 endif
+
+" g prefix is tedious
+function WrapOn()
+    noremap <buffer> <silent> k gk
+    noremap <buffer> <silent> j gj
+    noremap <buffer> <silent> 0 g0
+    noremap <buffer> <silent> $ g$
+endfunction
 
 function Writing()
     setlocal nonumber
     setlocal norelativenumber
+    setlocal wrap
+    setlocal linebreak
+    setlocal breakindent
+    call WrapOn()
+    setlocal softtabstop=2
+    setlocal shiftwidth=2
     setlocal laststatus=0
-    setlocal textwidth=80
 endfunction
 
 "  }}}
-
-"  Code {{{
-
-if has("autocmd")
-    filetype on
-    autocmd FileType cpp call CppCode()
-endif
-
-function CppCode()
-    setlocal expandtab
-    setlocal tabstop=4
-    setlocal softtabstop=4
-    setlocal shiftwidth=4
-endfunction
-
-"  }}}
+ 
