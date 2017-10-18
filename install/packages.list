@@ -3,28 +3,27 @@
 # lines with # are comment
 
 # X system
-xorg
-xfce4
-desktop-base
+# Uncomment if needed
+#xorg
+#xfce4
+#desktop-base
 
 # keyboard
 xcape
 
 # Sandbox
 firejail
-# Not in jessie
 
 # web
 firefox
 chromium-browser
-# firefox -> iceweasel in jessie
 
 # edit
 git
 tmux
 #tmate
 vim
-emacs
+#emacs
 #vagrant
 exuberant-ctags
 powerline
@@ -72,11 +71,12 @@ ssh
 #cups
 keepassx
 xdotool
+wordgrinder
 
 # music
 easytag
 abcde
-clementine
+#clementine
 lilypond
 frescobaldi
 youtube-dl
@@ -84,6 +84,10 @@ youtube-dl
 # rss
 newsbeuter
 mpv
+
+# draw
+gimp
+krita
 
 # utility
 libreoffice
@@ -93,7 +97,7 @@ vlc
 ## Interesting stuff ##
 
 # Window manager
-# awesome, openbox
+# awesome, openbox, i3, i3-gap
 
 # Terminal emulator
 # xfce4-terminal, roxterm
