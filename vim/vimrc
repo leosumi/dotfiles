@@ -57,6 +57,7 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'junegunn/goyo.vim'                      " distraction-free writing
  Plugin 'junegunn/limelight.vim'                 " hyperfocus-writing
  Plugin 'jceb/vim-orgmode'                       " org mode
+ Plugin 'tell-k/vim-autopep8'                    " python code style checker (need autopep8)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
