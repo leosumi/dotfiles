@@ -57,7 +57,10 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'junegunn/goyo.vim'                      " distraction-free writing
  Plugin 'junegunn/limelight.vim'                 " hyperfocus-writing
  Plugin 'jceb/vim-orgmode'                       " org mode
+ Plugin 'vimwiki/vimwiki'                        " easy to make wiki
  Plugin 'tell-k/vim-autopep8'                    " python code style checker (need autopep8)
+ Plugin 'vim-pandoc/vim-pandoc'                  " pandoc
+ Plugin 'vim-pandoc/vim-pandoc-syntax'           " pandoc
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -302,10 +305,15 @@ nmap <silent> <leader>oK :FSSplitAbove<CR>
 
 "  }}}
 
-"  ultisnips {{{
+"  plugins settings {{{
 
+" ultisnips
 " Slpit the window to edit
 let g:UltiSnipsEditSplit="vertical"
+
+" vimwiki
+" Use markdown syntax instead of the default one
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 "  }}}
 
