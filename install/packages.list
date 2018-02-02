@@ -16,7 +16,7 @@ firejail
 
 # web
 firefox
-chromium-browser
+#chromium-browser
 
 # edit
 git
@@ -51,13 +51,18 @@ libtclap-dev
 libsfml-dev
 
 # latex
-texlive
-texlive-lang-french
-texlive-humanities
+texlive-full
+#texlive
+#texlive-lang-french
+#texlive-humanities
 
 # R
 r-base
 r-base-dev
+
+# Math
+geogebra
+octave
 
 # tools
 ranger
@@ -65,16 +70,19 @@ htop
 curl
 #pass
 tree
-upgrade-system
+#upgrade-system
 # Will remove libraries
 ssh
 #cups
 keepassx
 xdotool
 wordgrinder
+# sc-im from andmarti1424/sc-im
+pandoc
 
 # music
 easytag
+flac
 abcde
 #clementine
 lilypond
@@ -83,7 +91,8 @@ youtube-dl
 
 # rss
 newsbeuter
-mpv
+# use vlc instead
+#mpv
 
 # draw
 gimp
