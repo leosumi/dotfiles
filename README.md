@@ -26,4 +26,13 @@ will work on Debian based distros.
 
 * To run tpm in tmux
 * To run vundle in vim
-* To install brave, rstudio and slack
+
+## Programs I also use
+
+* [brave](https://brave.com)
+* [rstudio](https://www.rstudio.com)
+* [slack](https://slack.com)
+
+Should I switch to :
+* neovim from vim
+* keepassxc from keepassx
