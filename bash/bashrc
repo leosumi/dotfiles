@@ -147,3 +147,5 @@ _cheatsh_complete_curl()
 }
 complete -F _cheatsh_complete_curl cheat
 
+# enable bash completion with pandoc
+eval "$(pandoc --bash-completion)"
