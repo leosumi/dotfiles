@@ -2,29 +2,22 @@
 # This file contains the packuages to install
 # lines with # are comment
 
-# X system
-# Uncomment if needed
-#xorg
-#xfce4
-#desktop-base
-
 # keyboard
 xcape
+
+# display
+redshift
 
 # Sandbox
 firejail
 
 # web
 firefox
-#chromium-browser
 
 # edit
 git
 tmux
-#tmate
 vim
-#emacs
-#vagrant
 exuberant-ctags
 powerline
 indent
@@ -52,13 +45,16 @@ libsfml-dev
 
 # latex
 texlive-full
-#texlive
-#texlive-lang-french
-#texlive-humanities
 
 # R
 r-base
 r-base-dev
+
+# Python
+python3-pip
+
+# Ruby
+ruby
 
 # Math
 geogebra
@@ -68,31 +64,23 @@ octave
 ranger
 htop
 curl
-#pass
 tree
-#upgrade-system
-# Will remove libraries
 ssh
-#cups
 keepassx
 xdotool
 wordgrinder
-# sc-im from andmarti1424/sc-im
 pandoc
 
 # music
 easytag
 flac
 abcde
-#clementine
 lilypond
 frescobaldi
 youtube-dl
 
 # rss
 newsbeuter
-# use vlc instead
-#mpv
 
 # draw
 gimp
@@ -102,16 +90,3 @@ krita
 libreoffice
 blender
 vlc
-
-## Interesting stuff ##
-
-# Window manager
-# awesome, openbox, i3, i3-gap
-
-# Terminal emulator
-# xfce4-terminal, roxterm
-
-# Music
-# libav-tools
-# mpd, mpc, ncmpcpp
-# cmus
