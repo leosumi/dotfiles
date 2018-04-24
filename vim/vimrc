@@ -61,6 +61,7 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'tell-k/vim-autopep8'                    " python code style checker (need autopep8)
  Plugin 'vim-pandoc/vim-pandoc'                  " pandoc
  Plugin 'vim-pandoc/vim-pandoc-syntax'           " pandoc
+ Plugin 'vim-scripts/loremipsum'                 " dummy text generator
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -333,6 +334,7 @@ autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 " - wrap the text to be easy to read (only visually)
 " - do not add eol if enter is not used: do not use textwidth
 " - linebreak and breakindent are awesome with wrap to cut the right way
+" - use the elipsis for line continuation (u2026)
 " - use marker to fold
 
 if has("autocmd")
@@ -341,6 +343,7 @@ if has("autocmd")
     autocmd FileType plaintex call Writing()
     autocmd FileType tex call Writing()
     autocmd FileType markdown call Writing()
+    autocmd FileType pandoc call Writing()
     autocmd FileType html call Writing()
 endif
 
@@ -358,6 +361,7 @@ function Writing()
     setlocal wrap
     setlocal linebreak
     setlocal breakindent
+    setlocal showbreak=…
     call WrapOn()
     setlocal softtabstop=2
     setlocal shiftwidth=2
