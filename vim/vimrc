@@ -23,8 +23,8 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'sunaku/xoria256.vim'
  Plugin 'freeo/vim-kalisi'
 
- Plugin 'vim-airline/vim-airline'                " status bar improvement
- Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
+"Plugin 'vim-airline/vim-airline'                " status bar improvement
+"Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
 
 " Plugin I use
  Plugin 'scrooloose/syntastic'                   " Syntax checking hacks for vim
@@ -153,16 +153,16 @@ set background=dark
 " Make the current line visible
 set cursorline
 
-function SetDarkTheme()
+function! SetDarkTheme()
   set background=dark
 endfunction
 
-function SetLightTheme()
+function! SetLightTheme()
   set background=light
 endfunction
 
-command Dark call SetDarkTheme()
-command Light call SetLightTheme()
+command! Dark call SetDarkTheme()
+command! Light call SetLightTheme()
 
 "  }}}
 
@@ -348,14 +348,14 @@ if has("autocmd")
 endif
 
 " g prefix is tedious
-function WrapOn()
+function! WrapOn()
     noremap <buffer> <silent> k gk
     noremap <buffer> <silent> j gj
     noremap <buffer> <silent> 0 g0
     noremap <buffer> <silent> $ g$
 endfunction
 
-function Writing()
+function! Writing()
     setlocal nonumber
     setlocal norelativenumber
     setlocal wrap
