@@ -205,6 +205,7 @@ set shiftwidth=4        " how many columns text is indented with >> and <<
 if has("autocmd")
     filetype on
     autocmd FileType make setlocal noexpandtab tabstop=4
+    autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 endif
 
 "  }}}
