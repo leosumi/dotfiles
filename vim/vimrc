@@ -22,6 +22,7 @@ Plugin 'VundleVim/Vundle.vim'
  Plugin 'chriskempson/base16-vim'
  Plugin 'sunaku/xoria256.vim'
  Plugin 'freeo/vim-kalisi'
+ Plugin 'rakr/vim-one'
 
 "Plugin 'vim-airline/vim-airline'                " status bar improvement
 "Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
