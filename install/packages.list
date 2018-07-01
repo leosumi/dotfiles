@@ -8,9 +8,6 @@ xcape
 # display
 redshift
 
-# Sandbox
-firejail
-
 # web
 firefox
 
@@ -20,10 +17,8 @@ system-config-printer
 # edit
 git
 tmux
-vim
+neovim
 exuberant-ctags
-powerline
-indent
 
 # Dev
 build-essential
@@ -32,19 +27,11 @@ build-essential
 gcc
 cmake
 doxygen
-graphviz
 gdb
 valgrind
 cppcheck
 vera++
 astyle
-
-# C++ library
-libboost-all-dev
-libgtest-dev
-# need to compile sources
-libtclap-dev
-libsfml-dev
 
 # latex
 texlive-full
@@ -69,21 +56,19 @@ htop
 curl
 tree
 ssh
-keepassx
 xdotool
-wordgrinder
 pandoc
 
 # music
-easytag
 flac
 abcde
-lilypond
-frescobaldi
 youtube-dl
 
+# password manager
+keepassxc
+
 # rss
-newsbeuter
+newsboat
 
 # draw
 gimp
