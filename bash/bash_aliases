@@ -19,11 +19,6 @@ alias vim-default='vim -u NONE -N'
 alias emacs='emacs &'
 #alias emacs='emacs --no-window-system'
 
-# Internet in a sandbox
-# Use brave as the default browser
-# Use firefox or chromium for everyday use
-# Use fox for secure search DO NOT TRUST AD-ONS
+# Internet
 alias brave='brave > /dev/null &'
-alias firefox='firejail firefox > /dev/null &'
-alias chromium='firejail chromium-browser > /dev/null &'
-alias fox='firejail --private firefox > /dev/null &'
+alias firefox='firefox > /dev/null &'
