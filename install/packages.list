@@ -17,7 +17,6 @@ system-config-printer
 # edit
 git
 tmux
-neovim
 exuberant-ctags
 
 # Dev

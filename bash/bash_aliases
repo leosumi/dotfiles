@@ -11,9 +11,10 @@ alias tat='tmux attach -t'
 alias tls='tmux ls'
 
 # vim aliases
-alias e='vim --remote'
-alias vi='vim'
-alias vim-default='vim -u NONE -N'
+alias e='nvim.appimage'
+alias vi='nvim.appimage'
+alias vim='nvim.appimage'
+alias nvim='nvim.appimage'
 
 # emacs aliases
 alias emacs='emacs &'
