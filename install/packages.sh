@@ -3,8 +3,47 @@
 # packages.sh -- installation of packages from packages.list
 # By Léo Sumi
 
+helpmsg() {
+    echo "Use --check or --install argument"
+}
+
+echowarning() {
+    tput setaf 1; echo $1; tput sgr0
+}
+
+debcheck() {
+    echo "Checking if $1 deb package exists"
+    apt show $1 > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        echowarning "WARNING $1 does not exist"
+	return 1
+    fi
+}
+
+debinstall() {
+    if debcheck "$1"; then
+        echo "Installing $1 deb package"
+        sudo apt install --assume-yes $1 > /dev/null 2>> packages.log
+    fi
+}
+
+snapcheck() {
+    echo "Checking if $1 snap package exists"
+    snap info $1 > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        echowarning "WARNING $1 does not exist"
+	return 1
+    fi
+}
+
+snapinstall() {
+    if snapcheck "$1"; then
+        echo "Installing $1 snap package"
+        sudo snap install $1 > /dev/null 2>> packages.log
+    fi
+}
+
 check() {
-    # Checking packages list
     tput setaf 2
     echo "Checking packages list"
     echo "======================"
@@ -15,16 +54,11 @@ check() {
         # lines with # are comment
         [[ "$package" =~ ^#.*$ ]] && continue
 
-        echo "Checking $package"
-        apt show $package > /dev/null 2>&1
-        if [ "$?" -ne "0" ]; then
-            tput setaf 1; echo "WARNING $package does not exist"; tput sgr0
-        fi
+        debcheck "$package"
     done < packages.list
 }
 
 install() {
-    # Installation
     tput setaf 2
     echo ""
     echo "Installation"
@@ -36,31 +70,32 @@ install() {
         # lines with # are comment
         [[ "$package" =~ ^#.*$ ]] && continue
 
-        apt show $package > /dev/null 2>&1
-        if [ "$?" -eq "0" ]; then
-            echo "Installing $package"
-            apt install --assume-yes $package > /dev/null 2>> packages.log
-        fi
+	debinstall "$package"
     done < packages.list
 }
 
 # execution
 
-if [ "$1" == "--check" ]; then
+# no argument
+if [ -z "$1" ]; then
+    helpmsg
+    exit 1
+fi
+
+
+if [ "$1" = "--check" ]; then
     check
     exit
 fi
 
-if [ "$1" == "--install" ]; then
+if [ "$1" = "--install" ]; then
     install
     exit
 fi
 
 # invalid arguments
-if [ -n "$1" ]; then
-    echo "packages.sh error: Invalid argument."
+if [ "$1" ]; then
+    echo "packages.sh error: Invalid argument"
+    helpmsg
     exit 1
 fi
-
-check
-install
