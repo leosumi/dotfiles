@@ -1,0 +1,12 @@
+# packages.list file
+# This file contains the packuages to install
+# lines with # are comment
+
+# LaTex
+mathpix-snipping-tool
+
+# Python
+pycharm-community
+
+# Communication
+mattermost-desktop

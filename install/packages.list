@@ -19,14 +19,16 @@ gnome-disk-utility
 
 # edit
 git-all
+vim
 tmux
 exuberant-ctags
 
 # Dev
 build-essential
 
-# C++
+# C/C++
 gcc
+g++
 cmake
 doxygen
 gdb
@@ -37,6 +39,7 @@ astyle
 
 # latex
 texlive-full
+texmaker
 
 # R
 r-base
@@ -47,6 +50,7 @@ python3-pip
 
 # Ruby
 ruby
+ruby-dev
 
 # Math
 geogebra
@@ -61,9 +65,12 @@ ssh
 xdotool
 pandoc
 
+# compression
+unzip
+unrar
+
 # music
 flac
-abcde
 youtube-dl
 
 # password manager
