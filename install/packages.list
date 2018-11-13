@@ -14,6 +14,9 @@ firefox
 # printer
 system-config-printer
 
+# disks
+gnome-disk-utility
+
 # edit
 git-all
 tmux
