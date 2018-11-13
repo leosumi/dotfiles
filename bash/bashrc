@@ -149,3 +149,21 @@ complete -F _cheatsh_complete_curl cheat
 
 # enable bash completion with pandoc
 eval "$(pandoc --bash-completion)"
+
+# Install Ruby Gems to gems in my home
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+
+# wal configuration
+# Applying the theme to new terminals
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# added by Anaconda3 installer
+export PATH="/home/leo/anaconda3/bin:$PATH"
+
+# why tab completion is not enable by default ?
+# in base env need: conda install argcomplete
+eval "$(register-python-argcomplete conda)"
