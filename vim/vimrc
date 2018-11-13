@@ -197,7 +197,7 @@ set shiftround
 " In Insert mode: use spaces instead of tab (because of tab encoding)
 set expandtab
 
-" Each indentation level is two spaces. Tabs are not used
+" Each indentation level is four spaces. Tabs are not used
 " tabstop == softtabstop == shiftwidth
 set tabstop=4           " Set tab size (if noexpandtab)
 set softtabstop=4       " how many columns when tab is used in insert mode
