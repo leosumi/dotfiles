@@ -36,3 +36,11 @@ will work on Debian based distros.
 Should I switch to :
 * neovim from vim
 * keepassxc from keepassx
+
+## If not in repo...
+
+The scripts directory contains scripts to download and install programs that are not in the repositories.
+
+## TODO
+
+* wget-grammalecte should not be dependant of the version number

@@ -27,6 +27,10 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'vim-airline/vim-airline'                " status bar improvement
 "Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
 
+" spelling
+ Plugin 'dpelle/vim-Grammalecte'                 " The Grammalecte French grammar checker
+ Plugin 'dpelle/vim-LanguageTool'                " The LanguageTool grammar checker
+
 " Plugin I use
  Plugin 'scrooloose/syntastic'                   " Syntax checking hacks for vim
 "Plugin 'vim-script/c.vim'                       " C/C++ IDE
@@ -257,6 +261,9 @@ endif
 
 set spelllang=en,fr
 set spellsuggest=5
+
+" Find grammalecte
+let g:grammalecte_cli_py='~/grammalecte/grammalecte-cli.py'
 
 "  }}}
 
