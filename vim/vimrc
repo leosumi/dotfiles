@@ -52,7 +52,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'sjl/gundo.vim'                          " undo tree
 "Plugin ' vim-scripts/undotree.vim'              " undo tree
  Plugin 'tmhedberg/matchit'                      " extended % matching for html, latex,...
- Plugin 'Dimercel/todo-vim'                      " manage todo notes 
+ Plugin 'Dimercel/todo-vim'                      " manage todo notes
  Plugin 'LaTeX-Box-Team/LaTeX-Box'               " Latex toolbox
  Plugin 'xuhdev/vim-latex-live-preview'          " Latex preview
 "Plugin 'edkolev/tmuxline.vim'                   " status bar for tmux integration
@@ -225,6 +225,13 @@ set cpoptions+=$
 
 "  }}}
 
+"  Text {{{
+
+" Automatically deletes all trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+"  }}}
+
 "  Search {{{
 
 " Switch on search pattern highlighting
@@ -379,4 +386,4 @@ function! Writing()
 endfunction
 
 "  }}}
- 
+
