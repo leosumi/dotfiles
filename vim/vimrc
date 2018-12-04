@@ -259,7 +259,10 @@ endif
 
 "  Spell {{{
 
-set spelllang=en,fr
+" Use English by default for spelllang
+" If a text is written in another language, use modelines
+"
+" Do not suggest an infinity of choices
 set spellsuggest=5
 
 " Find grammalecte
