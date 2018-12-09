@@ -22,7 +22,7 @@ fi
 echo "Rstudio is out-of-date"
 echo "current version: $installed_ver"
 echo "latest version:  $latest_ver"
-pushd $HOME/Downloads
+pushd /tmp
 wget -O rstudio.deb https://download1.rstudio.org/rstudio-xenial-$latest_ver-amd64.deb
 sudo gdebi rstudio.deb
 rm rstudio.deb
