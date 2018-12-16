@@ -48,14 +48,9 @@ check() {
     echo "Checking packages list"
     echo "======================"
     tput sgr0
-    while read package ; do
-        # skip empty lines
-        [ -z "$package" ] && continue
-        # lines with # are comment
-        [[ "$package" =~ ^#.*$ ]] && continue
-
+    sed "s/\s*#.*//g; /^\s*$/ d" packages.list | while read package ; do
         debcheck "$package"
-    done < packages.list
+    done
 }
 
 install() {
@@ -64,13 +59,8 @@ install() {
     echo "Installation"
     echo "============"
     tput sgr0
-    while read package ; do
-        # skip empty lines
-        [ -z "$package" ] && continue
-        # lines with # are comment
-        [[ "$package" =~ ^#.*$ ]] && continue
-
-	debinstall "$package"
+    sed "s/\s*#.*//g; /^\s*$/ d" packages.list | while read package ; do
+	    debinstall "$package"
     done < packages.list
 }
 
