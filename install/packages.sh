@@ -61,7 +61,7 @@ install() {
     tput sgr0
     sed "s/\s*#.*//g; /^\s*$/ d" packages.list | while read package ; do
 	    debinstall "$package"
-    done < packages.list
+    done
 }
 
 # execution
