@@ -4,82 +4,72 @@
 " The configuration is set to work with code (like C++)
 " See Writing fold for plain text configuration
 
-"  Vundle {{{
+"  Plugins {{{
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Automatic installation of plug.vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
 
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" let vim-plug manage vim-plug
+Plug 'junegunn/vim-plug'
 
 " colorschemes
- Plugin 'altercation/vim-colors-solarized'
- Plugin 'chriskempson/base16-vim'
- Plugin 'sunaku/xoria256.vim'
- Plugin 'freeo/vim-kalisi'
- Plugin 'rakr/vim-one'
+ Plug 'altercation/vim-colors-solarized'
+ Plug 'chriskempson/base16-vim'
+ Plug 'sunaku/xoria256.vim'
+ Plug 'freeo/vim-kalisi'
+ Plug 'rakr/vim-one'
 
-"Plugin 'vim-airline/vim-airline'                " status bar improvement
-"Plugin 'vim-airline/vim-airline-themes'         " vim-airline themes collection
+"Plug 'vim-airline/vim-airline'                " status bar improvement
+"Plug 'vim-airline/vim-airline-themes'         " vim-airline themes collection
 
 " spelling
- Plugin 'dpelle/vim-Grammalecte'                 " The Grammalecte French grammar checker
- Plugin 'dpelle/vim-LanguageTool'                " The LanguageTool grammar checker
+ Plug 'dpelle/vim-Grammalecte'                 " The Grammalecte French grammar checker
+ Plug 'dpelle/vim-LanguageTool'                " The LanguageTool grammar checker
 
-" Plugin I use
- Plugin 'scrooloose/syntastic'                   " Syntax checking hacks for vim
-"Plugin 'vim-script/c.vim'                       " C/C++ IDE
- Plugin 'othree/html5.vim'                       " html5 syntax and indent
- Plugin 'godlygeek/tabular'                      " aligning text (and needed for vim-markdown)
- Plugin 'plasticboy/vim-markdown'                " markdown syntax highlighting
- Plugin 'MikeCoder/markdown-preview.vim'         " markdown preview plugin
- Plugin 'wikimatze/hammer.vim'                   " markup language preview
- Plugin 'vim-scripts/SearchComplete'             " TAB completion inside of /
- Plugin 'scrooloose/nerdtree'                    " tree explorer
- Plugin 'tpope/vim-surround'                     " quoting/parenthesizing made simple
- Plugin 'tpope/vim-fugitive'                     " git wrapper
- Plugin 'kien/ctrlp.vim'                         " fuzzy finder
- Plugin 'xolox/vim-misc'                         " Needed for easytags
- Plugin 'xolox/vim-easytags'                     " Tag file manager (with ctags)
- Plugin 'majutsushi/tagbar'                      " Displays tags (need vim 7.0 & ctags 5.5)
- Plugin 'derekwyatt/vim-fswitch'                 " switching between companion source files
- Plugin 'derekwyatt/vim-protodef'                " from hpp files to cpp files (need fswitch, ctags, perl) ,PP
-"Plugin 'sjl/gundo.vim'                          " undo tree
-"Plugin ' vim-scripts/undotree.vim'              " undo tree
- Plugin 'tmhedberg/matchit'                      " extended % matching for html, latex,...
- Plugin 'Dimercel/todo-vim'                      " manage todo notes
- Plugin 'LaTeX-Box-Team/LaTeX-Box'               " Latex toolbox
- Plugin 'xuhdev/vim-latex-live-preview'          " Latex preview
-"Plugin 'edkolev/tmuxline.vim'                   " status bar for tmux integration
-"Plugin 'reedes/vim-pencil'
- Plugin 'sirver/ultisnips'                       " snippets engine
- Plugin 'honza/vim-snippets'                     " some snippets
- Plugin 'junegunn/goyo.vim'                      " distraction-free writing
- Plugin 'junegunn/limelight.vim'                 " hyperfocus-writing
- Plugin 'jceb/vim-orgmode'                       " org mode
- Plugin 'vimwiki/vimwiki'                        " easy to make wiki
- Plugin 'tell-k/vim-autopep8'                    " python code style checker (need autopep8)
- Plugin 'vim-pandoc/vim-pandoc'                  " pandoc
- Plugin 'vim-pandoc/vim-pandoc-syntax'           " pandoc
- Plugin 'vim-scripts/loremipsum'                 " dummy text generator
+" Plug I use
+ Plug 'scrooloose/syntastic'                   " Syntax checking hacks for vim
+"Plug 'vim-script/c.vim'                       " C/C++ IDE
+ Plug 'othree/html5.vim'                       " html5 syntax and indent
+ Plug 'godlygeek/tabular'                      " aligning text (and needed for vim-markdown)
+ Plug 'plasticboy/vim-markdown'                " markdown syntax highlighting
+ Plug 'MikeCoder/markdown-preview.vim'         " markdown preview plugin
+ Plug 'wikimatze/hammer.vim'                   " markup language preview
+ Plug 'vim-scripts/SearchComplete'             " TAB completion inside of /
+ Plug 'scrooloose/nerdtree'                    " tree explorer
+ Plug 'tpope/vim-surround'                     " quoting/parenthesizing made simple
+ Plug 'tpope/vim-fugitive'                     " git wrapper
+ Plug 'kien/ctrlp.vim'                         " fuzzy finder
+ Plug 'xolox/vim-misc'                         " Needed for easytags
+ Plug 'xolox/vim-easytags'                     " Tag file manager (with ctags)
+ Plug 'majutsushi/tagbar'                      " Displays tags (need vim 7.0 & ctags 5.5)
+ Plug 'derekwyatt/vim-fswitch'                 " switching between companion source files
+ Plug 'derekwyatt/vim-protodef'                " from hpp files to cpp files (need fswitch, ctags, perl) ,PP
+"Plug 'sjl/gundo.vim'                          " undo tree
+"Plug ' vim-scripts/undotree.vim'              " undo tree
+ Plug 'tmhedberg/matchit'                      " extended % matching for html, latex,...
+ Plug 'Dimercel/todo-vim'                      " manage todo notes
+ Plug 'LaTeX-Box-Team/LaTeX-Box'               " Latex toolbox
+ Plug 'xuhdev/vim-latex-live-preview'          " Latex preview
+"Plug 'edkolev/tmuxline.vim'                   " status bar for tmux integration
+"Plug 'reedes/vim-pencil'
+ Plug 'sirver/ultisnips'                       " snippets engine
+ Plug 'honza/vim-snippets'                     " some snippets
+ Plug 'junegunn/goyo.vim'                      " distraction-free writing
+ Plug 'junegunn/limelight.vim'                 " hyperfocus-writing
+ Plug 'jceb/vim-orgmode'                       " org mode
+ Plug 'vimwiki/vimwiki'                        " easy to make wiki
+ Plug 'tell-k/vim-autopep8'                    " python code style checker (need autopep8)
+ Plug 'vim-pandoc/vim-pandoc'                  " pandoc
+ Plug 'vim-pandoc/vim-pandoc-syntax'           " pandoc
+ Plug 'vim-scripts/loremipsum'                 " dummy text generator
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
 
 "  }}}
 
@@ -389,4 +379,3 @@ function! Writing()
 endfunction
 
 "  }}}
-

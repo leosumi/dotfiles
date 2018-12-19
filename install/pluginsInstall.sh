@@ -8,7 +8,3 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 echo "get tmux plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# get vundle
-echo "get Vundle"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-

@@ -1,5 +1,6 @@
 # Do not track plugins
-vim/bundle/
+vim/plugged/
+vim/autoload/
 vim/MarkDownRes/
 vim/.netrwhist
 
