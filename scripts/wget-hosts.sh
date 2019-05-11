@@ -5,6 +5,13 @@
 hosts_bak="/etc/hosts.bak"
 hosts="/etc/hosts"
 
+# Check if root
+if [ "$(whoami)" \!= "root" ]; then
+    echo "You need root privileges"
+    echo "You can use 'sudo !!' to run the script again with privileges"
+    exit 1
+fi
+
 # Save the original hosts file (Do not delete it)
 if [ \! -e "$hosts_bak" ]; then
     sudo cp $hosts $hosts_bak
