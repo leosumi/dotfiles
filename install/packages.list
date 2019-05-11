@@ -46,6 +46,10 @@ zathura
 pdftk
 pdfgrep
 
+# suckless
+suckless-tools
+sxiv
+
 # R
 r-base
 r-base-dev
