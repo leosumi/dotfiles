@@ -41,6 +41,11 @@ astyle
 texlive-full
 texmaker
 
+# PDF
+zathura
+pdftk
+pdfgrep
+
 # R
 r-base
 r-base-dev
