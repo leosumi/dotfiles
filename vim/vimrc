@@ -50,6 +50,7 @@ Plug 'junegunn/vim-plug'
  Plug 'majutsushi/tagbar'                      " Displays tags (need vim 7.0 & ctags 5.5)
  Plug 'derekwyatt/vim-fswitch'                 " switching between companion source files
  Plug 'derekwyatt/vim-protodef'                " from hpp files to cpp files (need fswitch, ctags, perl) ,PP
+ Plug 'vim-scripts/DoxygenToolkit.vim'         " Doxygen documentation
 "Plug 'sjl/gundo.vim'                          " undo tree
 "Plug ' vim-scripts/undotree.vim'              " undo tree
  Plug 'tmhedberg/matchit'                      " extended % matching for html, latex,...
