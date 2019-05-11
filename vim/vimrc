@@ -326,6 +326,10 @@ let g:UltiSnipsEditSplit="vertical"
 " Use markdown syntax instead of the default one
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
+" vim-pandoc-syntax
+" Do not use the annoying conceal feature
+let g:pandoc#syntax#conceal#use=0
+
 "  }}}
 
 "  Templates {{{
