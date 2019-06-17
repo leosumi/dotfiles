@@ -1,24 +1,17 @@
-#! /bin/bash
+#! /bin/sh
 # Get hosts file from StevenBlack
 # by Léo Sumi
 
 hosts_bak="/etc/hosts.bak"
 hosts="/etc/hosts"
 
-# Check if root
-if [ "$(whoami)" \!= "root" ]; then
-    echo "You need root privileges"
-    echo "You can use 'sudo !!' to run the script again with privileges"
-    exit 1
-fi
-
 # Save the original hosts file (Do not delete it)
-if [ \! -e "$hosts_bak" ]; then
+if [ ! -e "$hosts_bak" ]; then
     sudo cp $hosts $hosts_bak
 fi
 
 # Get the new hosts file
-pushd /tmp
+cd /tmp || exit 1
 wget -O new-hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts
 
 # Check for date
@@ -35,6 +28,6 @@ echo "The hosts file is out-of-date"
 echo "current version: $cur_hosts_date"
 echo "latest version: $new_hosts_date"
 sudo cp $hosts_bak $hosts
-sudo cat new-hosts >> $hosts
+cat new-hosts | sudo tee -a $hosts > /dev/null
 rm new-hosts
-popd
+cd - || exit
