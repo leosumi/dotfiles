@@ -5,6 +5,9 @@
 # keyboard
 xcape
 
+# App finder
+rofi
+
 # display
 redshift
 
