@@ -273,6 +273,9 @@ let g:grammalecte_cli_py='~/grammalecte/grammalecte-cli.py'
 " backslash sucks
 let mapleader = ","
 
+" Seven years to discover this one (thanks vim-orgmode)
+let maplocalleader = " "
+
 " Edit the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
