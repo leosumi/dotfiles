@@ -31,3 +31,6 @@ sudo cp $hosts_bak $hosts
 cat new-hosts | sudo tee -a $hosts > /dev/null
 rm new-hosts
 cd - || exit
+
+# Hosts file modification
+sudo sed -i '/\.reddit\.com$/d' /etc/hosts
