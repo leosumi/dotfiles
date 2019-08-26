@@ -2,7 +2,7 @@
 # Get grammalecte for dpelle/vim-Grammalecte
 # by Léo Sumi
 
-version=1.1.1
+version=1.3.2
 
 mkdir $HOME/grammalecte
 if [ $? -ne 0 ]; then
