@@ -13,7 +13,6 @@ alias tls='tmux ls'
 # vim aliases
 alias e='vim'
 alias vi='vim'
-alias nvim='nvim.appimage'
 
 # emacs aliases
 alias emacs='emacs &'
