@@ -32,6 +32,7 @@ will work on Debian based distros.
 * [brave](https://brave.com)
 * [rstudio](https://www.rstudio.com)
 * [slack](https://slack.com)
+* [VSCodium](https://vscodium.com)
 
 Should I switch to :
 * neovim from vim
