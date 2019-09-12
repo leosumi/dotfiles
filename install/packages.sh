@@ -76,6 +76,11 @@ pacmancheck()
     msg "Checking if $1 package exists"
     pacman -Si $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
+        # Package could be a group
+        pacman -Sg $1 > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            return 0
+        fi
         warning "$1 does not exist"
         return 1
     fi
