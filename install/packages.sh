@@ -3,6 +3,7 @@
 # By Léo Sumi
 
 packages_file="packages.list"
+log_file="packages.log"
 
 help_msg()
 {
@@ -19,19 +20,24 @@ echo_green()
     tput setaf 2; echo $1; tput sgr0
 }
 
+msg()
+{
+    echo_green "MESSAGE: $1" | tee -a $log_file
+}
+
 warning()
 {
-    echo_red "WARNING: $1"
+    echo_red "WARNING: $1" | tee -a $log_file
 }
 
 error()
 {
-    echo_red "ERROR: $1"
+    echo_red "ERROR: $1" | tee -a $log_file
 }
 
 debcheck()
 {
-    echo "Checking if $1 deb package exists"
+    msg "Checking if $1 deb package exists"
     apt-cache show $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
@@ -42,14 +48,14 @@ debcheck()
 debinstall()
 {
     if debcheck $1; then
-        echo "Installing $1 deb package"
-        sudo apt-get install --assume-yes $1 > /dev/null 2>> packages.log
+        msg "Installing $1 deb package"
+        sudo apt-get install --assume-yes $1 2>&1 | tee -a $log_file
     fi
 }
 
 snapcheck()
 {
-    echo "Checking if $1 snap package exists"
+    msg "Checking if $1 snap package exists"
     snap info $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
@@ -60,14 +66,14 @@ snapcheck()
 snapinstall()
 {
     if snapcheck $1; then
-        echo "Installing $1 snap package"
-        sudo snap install $1 > /dev/null 2>> packages.log
+        msg "Installing $1 snap package"
+        sudo snap install $1 2>&1 | tee -a $log_file
     fi
 }
 
 pacmancheck()
 {
-    echo "Checking if $1 package exists"
+    msg "Checking if $1 package exists"
     pacman -Si $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
@@ -78,14 +84,14 @@ pacmancheck()
 pacmaninstall()
 {
     if pacmancheck $1; then
-        echo "Installing $1 package"
-        sudo pacman -S $1 > /dev/null 2>> packages.log
+        msg "Installing $1 package"
+        sudo pacman -S $1 2>&1 | tee -a $log_file
     fi
 }
 
 aurcheck()
 {
-    echo "Checking if $1 package exists in AUR"
+    msg "Checking if $1 package exists in AUR"
     pamac info $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
@@ -96,8 +102,8 @@ aurcheck()
 aurinstall()
 {
     if aurcheck $1; then
-        echo "Installing $1 package from AUR"
-        pamac install $1 > /dev/null 2>> packages.log
+        msg "Installing $1 package from AUR"
+        pamac install $1 2>&1 | tee -a $log_file
     fi
 }
 
@@ -166,8 +172,8 @@ manjaro_install()
 
 check()
 {
-    echo_green "Checking packages list"
-    echo_green "======================"
+    echo "Checking packages list"
+    echo "======================"
     current_distribution=`lsb_release --short --id`
     case "$current_distribution" in
         "Ubuntu") ubuntu_check ;;
@@ -178,8 +184,8 @@ check()
 
 install()
 {
-    echo_green "Installation"
-    echo_green "============"
+    echo "Installation"
+    echo "============"
     current_distribution=`lsb_release --short --id`
     case "$current_distribution" in
         "Ubuntu") ubuntu_install ;;
