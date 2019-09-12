@@ -66,6 +66,7 @@ d,p,sxiv
 d,,r-base
 d,,r-base-dev
 ,p,r
+,a,rstudio-desktop-bin
 
 # Python
 d,,python3-pip
