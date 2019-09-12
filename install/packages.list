@@ -1,102 +1,105 @@
 # packages.list file
 # This file contains the packuages to install
 # lines with # are comment
+# line entry format: UBUNTU_TAG,MANJARO_TAG,PACKAGE_NAME
+# - UBUNTU_TAG = d (deb package), s (snap package), "" (not installed)
+# - MANJARO_TAG = p (package), a (AUR package), s (snap package), "" (not installed)
 
 # keyboard
-xcape
+d,,xcape
 
 # App finder
-rofi
+d,,rofi
 
 # display
-redshift
+d,,redshift
 
 # web
-firefox
+d,,firefox
 
 # printer
-system-config-printer
+d,,system-config-printer
 
 # disks
-gnome-disk-utility
+d,,gnome-disk-utility
 
 # edit
-git-all
-vim
-tmux
-exuberant-ctags
+d,,git-all
+d,,vim
+d,,tmux
+d,,exuberant-ctags
 
 # Dev
-build-essential
+d,,build-essential
 
 # C/C++
-gcc
-g++
-cmake
-doxygen
-gdb
-valgrind
-cppcheck
-vera++
-astyle
+d,,gcc
+d,,g++
+d,,cmake
+d,,doxygen
+d,,gdb
+d,,valgrind
+d,,cppcheck
+d,,vera++
+d,,astyle
 
 # latex
-texlive-full
-texmaker
+d,,texlive-full
+d,,texmaker
 
 # PDF
-zathura
-pdftk
-pdfgrep
+d,,zathura
+d,,pdftk
+d,,pdfgrep
 
 # suckless
-suckless-tools
-sxiv
+d,,suckless-tools
+d,,sxiv
 
 # R
-r-base
-r-base-dev
+d,,r-base
+d,,r-base-dev
 
 # Python
-python3-pip
+d,,python3-pip
 
 # Ruby
-ruby
-ruby-dev
+d,,ruby
+d,,ruby-dev
 
 # Math
-geogebra
-octave
+d,,geogebra
+d,,octave
 
 # tools
-ranger
-htop
-curl
-tree
-ssh
-xdotool
-pandoc
+d,,ranger
+d,,htop
+d,,curl
+d,,tree
+d,,ssh
+d,,xdotool
+d,,pandoc
 
 # compression
-unzip
-unrar
+d,,unzip
+d,,unrar
 
 # music
-flac
-youtube-dl
+d,,flac
+d,,youtube-dl
 
 # password manager
-keepassxc
+d,,keepassxc
 
 # rss
-newsboat
+d,,newsboat
 
 # draw
-gimp
-krita
-inkscape
+d,,gimp
+d,,krita
+d,,inkscape
 
 # utility
-libreoffice
-blender
-vlc
+d,,libreoffice
+d,,blender
+d,,vlc
