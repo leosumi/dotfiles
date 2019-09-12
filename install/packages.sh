@@ -103,7 +103,7 @@ aurinstall()
 {
     if aurcheck $1; then
         msg "Installing $1 package from AUR"
-        sudo yay --noconfirm -S $1 2>&1 | tee -a $log_file
+        yay --noconfirm -S $1 2>&1 | tee -a $log_file
     fi
 }
 
