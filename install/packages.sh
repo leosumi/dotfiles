@@ -92,7 +92,7 @@ pacmaninstall()
 aurcheck()
 {
     msg "Checking if $1 package exists in AUR"
-    pamac info $1 > /dev/null 2>&1
+    yay -Si $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
         return 1
@@ -103,7 +103,7 @@ aurinstall()
 {
     if aurcheck $1; then
         msg "Installing $1 package from AUR"
-        pamac install $1 2>&1 | tee -a $log_file
+        sudo yay -S $1 2>&1 | tee -a $log_file
     fi
 }
 
@@ -131,18 +131,13 @@ ubuntu_install()
     done
 }
 
-manjaro_snap_support()
-{
-    snap > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        aurinstall snapd
-        sudo systemctl enable --now snapd.socket
-    fi
-}
-
 manjaro_check()
 {
-    manjaro_snap_support
+    # Check for snap support
+    snap > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        warning "snap packages are not supported, install snapd"
+    fi
 
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
         case $manjaro_tag in
@@ -157,7 +152,12 @@ manjaro_check()
 
 manjaro_install()
 {
-    manjaro_snap_support
+    # Enable snap support
+    snap > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        aurinstall snapd
+        sudo systemctl enable --now snapd.socket
+    fi
 
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
         case $manjaro_tag in
