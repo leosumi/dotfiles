@@ -85,7 +85,7 @@ pacmaninstall()
 {
     if pacmancheck $1; then
         msg "Installing $1 package"
-        sudo pacman -S $1 2>&1 | tee -a $log_file
+        sudo pacman --noconfirm -S $1 2>&1 | tee -a $log_file
     fi
 }
 
@@ -103,7 +103,7 @@ aurinstall()
 {
     if aurcheck $1; then
         msg "Installing $1 package from AUR"
-        sudo yay -S $1 2>&1 | tee -a $log_file
+        sudo yay --noconfirm -S $1 2>&1 | tee -a $log_file
     fi
 }
 
