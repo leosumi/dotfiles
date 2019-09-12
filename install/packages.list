@@ -70,11 +70,6 @@ d,,r-base-dev
 # Python
 d,,python3-pip
 ,p,python-pip
-s,,pycharm-community
-
-# Ruby
-d,,ruby
-d,,ruby-dev
 
 # Shell script
 s,p,shellcheck
@@ -110,9 +105,11 @@ d,,newsboat
 d,p,gimp
 d,p,krita
 d,p,inkscape
+d,p,blender
 
-# Utility
+# Multimedia
+d,p,vlc
+
+# Office
 d,,libreoffice
 ,p,libreoffice-fresh
-d,p,blender
-d,p,vlc
