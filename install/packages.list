@@ -5,25 +5,25 @@
 # - UBUNTU_TAG = d (deb package), s (snap package), "" (not installed)
 # - MANJARO_TAG = p (package), a (AUR package), s (snap package), "" (not installed)
 
-# keyboard
+# Keyboard
 d,p,xcape
 
 # App finder
 d,p,rofi
 
-# display
+# Display
 d,p,redshift
 
-# web
+# Web
 d,p,firefox
 
-# printer
+# Printer
 d,p,system-config-printer
 
-# disks
+# Disks
 d,p,gnome-disk-utility
 
-# edit
+# Edit
 d,,git-all
 ,p,git
 d,p,vim
@@ -45,7 +45,7 @@ d,p,cppcheck
 d,a,vera++
 d,p,astyle
 
-# latex
+# LaTex
 d,,texlive-full
 ,p,texlive-most
 ,p,texlive-lang
@@ -83,7 +83,7 @@ s,p,shellcheck
 d,p,geogebra
 d,p,octave
 
-# tools
+# Tools
 d,p,ranger
 d,p,htop
 d,p,curl
@@ -92,26 +92,26 @@ d,,ssh
 d,p,xdotool
 d,p,pandoc
 
-# compression
+# Compression
 d,p,unzip
 d,p,unrar
 
-# music
+# Music
 d,p,flac
 d,p,youtube-dl
 
-# password manager
+# Password manager
 d,p,keepassxc
 
-# rss
+# RSS
 d,,newsboat
 
-# draw
+# Draw
 d,p,gimp
 d,p,krita
 d,p,inkscape
 
-# utility
+# Utility
 d,,libreoffice
 ,p,libreoffice-fresh
 d,p,blender
