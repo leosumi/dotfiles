@@ -50,7 +50,6 @@ d,,texlive-full
 ,p,texlive-most
 ,p,texlive-lang
 d,p,texmaker
-s,s,mathpix-snipping-tool
 
 # PDF
 d,p,zathura
