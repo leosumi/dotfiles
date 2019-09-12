@@ -46,6 +46,7 @@ d,,astyle
 # latex
 d,,texlive-full
 d,,texmaker
+s,,mathpix-snipping-tool
 
 # PDF
 d,,zathura
@@ -62,10 +63,14 @@ d,,r-base-dev
 
 # Python
 d,,python3-pip
+s,,pycharm-community
 
 # Ruby
 d,,ruby
 d,,ruby-dev
+
+# Shell script
+s,,shellcheck
 
 # Math
 d,,geogebra
