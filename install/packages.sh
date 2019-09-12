@@ -32,7 +32,7 @@ error()
 debcheck()
 {
     echo "Checking if $1 deb package exists"
-    apt show $1 > /dev/null 2>&1
+    apt-cache show $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
 	    return 1
@@ -43,7 +43,7 @@ debinstall()
 {
     if debcheck $1; then
         echo "Installing $1 deb package"
-        sudo apt install --assume-yes $1 > /dev/null 2>> packages.log
+        sudo apt-get install --assume-yes $1 > /dev/null 2>> packages.log
     fi
 }
 
