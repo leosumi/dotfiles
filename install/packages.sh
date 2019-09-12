@@ -97,7 +97,7 @@ aurinstall()
 {
     if aurcheck $1; then
         echo "Installing $1 package from AUR"
-        sudo pamac install $1 > /dev/null 2>> packages.log
+        pamac install $1 > /dev/null 2>> packages.log
     fi
 }
 
