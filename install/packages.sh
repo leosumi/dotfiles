@@ -125,8 +125,19 @@ ubuntu_install()
     done
 }
 
+manjaro_snap_support()
+{
+    snap > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        aurinstall snapd
+        sudo systemctl enable --now snapd.socket
+    fi
+}
+
 manjaro_check()
 {
+    manjaro_snap_support
+
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
         case $manjaro_tag in
             "p") pacmancheck $package ;;
@@ -140,6 +151,8 @@ manjaro_check()
 
 manjaro_install()
 {
+    manjaro_snap_support
+
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
         case $manjaro_tag in
             "p") pacmaninstall $package ;;
