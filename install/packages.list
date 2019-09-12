@@ -6,63 +6,70 @@
 # - MANJARO_TAG = p (package), a (AUR package), s (snap package), "" (not installed)
 
 # keyboard
-d,,xcape
+d,p,xcape
 
 # App finder
-d,,rofi
+d,p,rofi
 
 # display
-d,,redshift
+d,p,redshift
 
 # web
-d,,firefox
+d,p,firefox
 
 # printer
-d,,system-config-printer
+d,p,system-config-printer
 
 # disks
-d,,gnome-disk-utility
+d,p,gnome-disk-utility
 
 # edit
 d,,git-all
-d,,vim
-d,,tmux
+,p,git
+d,p,vim
+d,p,tmux
 d,,exuberant-ctags
+,p,ctags
 
 # Dev
 d,,build-essential
 
 # C/C++
-d,,gcc
+d,p,gcc
 d,,g++
-d,,cmake
-d,,doxygen
-d,,gdb
-d,,valgrind
-d,,cppcheck
-d,,vera++
-d,,astyle
+d,p,cmake
+d,p,doxygen
+d,p,gdb
+d,p,valgrind
+d,p,cppcheck
+d,a,vera++
+d,p,astyle
 
 # latex
 d,,texlive-full
-d,,texmaker
-s,,mathpix-snipping-tool
+,p,texlive-most
+,p,texlive-lang
+d,p,texmaker
+s,s,mathpix-snipping-tool
 
 # PDF
-d,,zathura
-d,,pdftk
-d,,pdfgrep
+d,p,zathura
+d,s,pdftk
+d,p,pdfgrep
 
 # suckless
 d,,suckless-tools
-d,,sxiv
+d,p,sxiv
+,a,sent
 
 # R
 d,,r-base
 d,,r-base-dev
+,p,r
 
 # Python
 d,,python3-pip
+,p,python-pip
 s,,pycharm-community
 
 # Ruby
@@ -70,41 +77,42 @@ d,,ruby
 d,,ruby-dev
 
 # Shell script
-s,,shellcheck
+s,p,shellcheck
 
 # Math
-d,,geogebra
-d,,octave
+d,p,geogebra
+d,p,octave
 
 # tools
-d,,ranger
-d,,htop
-d,,curl
-d,,tree
+d,p,ranger
+d,p,htop
+d,p,curl
+d,p,tree
 d,,ssh
-d,,xdotool
-d,,pandoc
+d,p,xdotool
+d,p,pandoc
 
 # compression
-d,,unzip
-d,,unrar
+d,p,unzip
+d,p,unrar
 
 # music
-d,,flac
-d,,youtube-dl
+d,p,flac
+d,p,youtube-dl
 
 # password manager
-d,,keepassxc
+d,p,keepassxc
 
 # rss
 d,,newsboat
 
 # draw
-d,,gimp
-d,,krita
-d,,inkscape
+d,p,gimp
+d,p,krita
+d,p,inkscape
 
 # utility
 d,,libreoffice
-d,,blender
-d,,vlc
+,p,libreoffice-fresh
+d,p,blender
+d,p,vlc
