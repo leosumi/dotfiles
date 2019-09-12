@@ -4,6 +4,7 @@
 
 packages_file="packages.list"
 log_file="packages.log"
+snap_system="true"
 
 help_msg()
 {
@@ -159,7 +160,7 @@ manjaro_install()
 {
     # Enable snap support
     snap > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
+    if [ $? -ne 0 && $snap_system = "true" ]; then
         aurinstall snapd
         sudo systemctl enable --now snapd.socket
     fi
