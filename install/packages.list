@@ -51,6 +51,9 @@ d,,texlive-full
 ,p,texlive-lang
 d,p,texmaker
 
+# Bibliography manager
+,a,jabref
+
 # PDF
 d,p,zathura
 d,s,pdftk
