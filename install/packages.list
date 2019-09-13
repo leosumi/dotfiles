@@ -121,3 +121,6 @@ d,p,vlc
 # Office
 d,,libreoffice
 ,p,libreoffice-fresh
+
+# Flash cards system
+d,p,anki
