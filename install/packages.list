@@ -60,6 +60,10 @@ d,p,zathura
 d,s,pdftk
 d,p,pdfgrep
 
+# Tasks manager
+d,,taskwarrior
+,p,task
+
 # suckless
 d,,suckless-tools
 d,p,sxiv
