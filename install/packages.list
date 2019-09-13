@@ -27,6 +27,7 @@ d,p,gnome-disk-utility
 d,,git-all
 ,p,git
 d,p,vim
+,p,neovim
 d,p,tmux
 d,,exuberant-ctags
 ,p,ctags
