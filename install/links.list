@@ -9,7 +9,6 @@ $DOTFILES_DIR/bash/bashrc $HOME/.bashrc
 $DOTFILES_DIR/bash/bash_aliases $HOME/.bash_aliases
 $DOTFILES_DIR/git $HOME/.config/git
 $DOTFILES_DIR/tmux/tmux.conf $HOME/.tmux.conf
-$DOTFILES_DIR/vim $HOME/.vim
 
 $DOTFILES_DIR/music/abcde.conf $HOME/.abcde.conf
 
