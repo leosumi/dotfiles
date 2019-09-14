@@ -102,6 +102,7 @@ d,p,unrar
 # Music
 d,p,flac
 d,p,youtube-dl
+d,p,cmus
 
 # Password manager
 d,p,keepassxc
