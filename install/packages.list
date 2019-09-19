@@ -8,6 +8,9 @@
 # Keyboard
 d,p,xcape
 
+# Window manager
+d,p,wmctrl
+
 # App finder
 d,p,rofi
 
@@ -63,6 +66,9 @@ d,p,pdfgrep
 # Tasks manager
 d,,taskwarrior
 ,p,task
+
+# Calendar
+d,p,calcurse
 
 # suckless
 d,,suckless-tools
