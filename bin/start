@@ -3,6 +3,6 @@
 firefox &
 keepassxc &
 xfce4-terminal --execute sh -c "tmux attach -t base || tmux new -s base"  &
-sleep 3
+sleep 5
 wmctrl -s 1
 xfce4-terminal --fullscreen --hide-menubar --execute sh -c "tmux attach -t info || tmux new -s info" &
