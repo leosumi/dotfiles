@@ -49,6 +49,9 @@ d,p,cppcheck
 d,a,vera++
 d,p,astyle
 
+# Java
+,p,jdk-openjdk
+
 # LaTex
 d,,texlive-full
 ,p,texlive-most
@@ -131,3 +134,6 @@ d,,libreoffice
 
 # Flash cards system
 d,p,anki
+
+# Mind Map
+d,a,freeplane
