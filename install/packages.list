@@ -137,3 +137,7 @@ d,p,anki
 
 # Mind Map
 d,a,freeplane
+
+# Proofreading
+,p,languagetool
+,p,grammalecte
