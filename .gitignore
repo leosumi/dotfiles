@@ -4,3 +4,5 @@ vim/autoload/
 vim/MarkDownRes/
 vim/.netrwhist
 
+# Do not track tags
+tags
