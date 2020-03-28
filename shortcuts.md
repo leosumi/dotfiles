@@ -11,30 +11,30 @@ To use the preferred applications, it is better to use the `exo-open` command.
 
 | Implemented | Key binding   | Bound to    | Command                            | Other possibilities   |
 | ----------- | -----------   | ----------- | -------                            | -------------------   |
-| [ ]         | Super + Enter | Search      | rofi                               | Terminal              |
-| [ ]         | Super + Space | Search      | rofi                               | Terminal              |
-| [ ]         | Super + A     | Anki        | anki                               |                       |
-| [ ]         | Super + B     | Blender     | blender                            |                       |
-| [ ]         | Super + C     | chromium    |                                    |                       |
-| [ ]         | Super + D     | Disks       | gnome-disks                        |                       |
-| [ ]         | Super + E     | Eclipse     |                                    | Emacs                 |
+| [x]         | Super + Enter | Search      | rofi -show drun                    | Terminal              |
+| [x]         | Super + Space | Search      | rofi -show window                  | Terminal              |
+| [xj         | Super + A     | Anki        | anki                               |                       |
+| [x]         | Super + B     | Blender     | blender                            |                       |
+| [ ]         | Super + C     |             |                                    | Chromium              |
+| [x]         | Super + D     | Disks       | gnome-disks                        |                       |
+| [x]         | Super + E     | Eclipse     | eclipse                            | Emacs, Editor         |
 | [x]         | Super + F     | Freeplane   | freeplane                          | Firefox, File manager |
-| [ ]         | Super + G     | GIMP        | gimp                               |                       |
-| [ ]         | Super + H     | Htop        | htop                               |                       |
-| [ ]         | Super + I     | Inkscape    | inkscape                           |                       |
+| [x]         | Super + G     | GIMP        | gimp                               | Geogebra              |
+| [ ]         | Super + H     |             |                                    |                       |
+| [x]         | Super + I     | Inkscape    | inkscape                           |                       |
 | [x]         | Super + J     | Jabref      | jabref, /opt/jabref/bin/JabRef     |                       |
 | [x]         | Super + K     | Keepassxc   | keepassxc                          | Krita                 |
-| [ ]         | Super + L     | Lock        | xflock4                            |                       |
-| [ ]         | Super + M     | Mail reader | exo-open --launch MailReader       |                       |
+| [x]         | Super + L     | Lock        | xflock4                            |                       |
+| [x]         | Super + M     | Mail reader | exo-open --launch MailReader       |                       |
 | [ ]         | Super + N     |             |                                    |                       |
-| [ ]         | Super + O     | Octave      | octave                             |                       |
-| [ ]         | Super + P     | Power off   |                                    |                       |
+| [x]         | Super + O     | Octave      | octave --gui                       |                       |
+| [ ]         | Super + P     |             |                                    | Power off             |
 | [ ]         | Super + Q     |             |                                    |                       |
-| [ ]         | Super + R     | Rstudio     | rstudio-bin                        |                       |
+| [x]         | Super + R     | Rstudio     | rstudio, rstudio-bin               |                       |
 | [x]         | Super + S     | Settings    | xfce4-settings-manager             |                       |
 | [x]         | Super + T     | Terminal    | exo-open --launch TerminalEmulator |                       |
-| [ ]         | Super + U     | Update      |                                    |                       |
-| [ ]         | Super + V     | VLC         | vlc                                |                       |
+| [ ]         | Super + U     |             |                                    | Update                |
+| [x]         | Super + V     | VLC         | vlc                                |                       |
 | [x]         | Super + W     | Web browser | exo-open --launch WebBrowser       |                       |
 | [ ]         | Super + X     |             |                                    |                       |
 | [ ]         | Super + Y     |             |                                    |                       |
