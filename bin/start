@@ -1,8 +1,16 @@
 #!/bin/sh
 
+# Home workspace
 firefox &
 keepassxc &
-xfce4-terminal --execute sh -c "tmux attach -t base || tmux new -s base"  &
+xfce4-terminal &
 sleep 5
+
+# Task workspace
 wmctrl -s 1
-xfce4-terminal --fullscreen --hide-menubar --execute sh -c "tmux attach -t info || tmux new -s info" &
+xfce4-terminal --fullscreen --hide-menubar --color-bg=#1e1e1e -e 'sh -c "~/bin/tmux-task.sh"' &
+sleep 5
+
+# Mail workspace
+wmctrl -s 2
+thunderbird &
