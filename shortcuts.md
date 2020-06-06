@@ -15,7 +15,7 @@ To use the preferred applications, it is better to use the `exo-open` command.
 | [x]         | Super + Space | Search      | rofi -show window                  | Terminal              |
 | [xj         | Super + A     | Anki        | anki                               |                       |
 | [x]         | Super + B     | Blender     | blender                            |                       |
-| [ ]         | Super + C     |             |                                    | Chromium              |
+| [ ]         | Super + C     |             |                                    | Chromium, Calc        |
 | [x]         | Super + D     | Disks       | gnome-disks                        |                       |
 | [x]         | Super + E     | Eclipse     | eclipse                            | Emacs, Editor         |
 | [x]         | Super + F     | Freeplane   | freeplane                          | Firefox, File manager |
@@ -24,7 +24,7 @@ To use the preferred applications, it is better to use the `exo-open` command.
 | [x]         | Super + I     | Inkscape    | inkscape                           |                       |
 | [x]         | Super + J     | Jabref      | /opt/jabref/bin/JabRef, JabRef     |                       |
 | [x]         | Super + K     | Keepassxc   | keepassxc                          | Krita                 |
-| [x]         | Super + L     | Lock        | xflock4                            |                       |
+| [x]         | Super + L     | Lock        | xflock4                            | LibreOffice           |
 | [x]         | Super + M     | Mail reader | exo-open --launch MailReader       |                       |
 | [ ]         | Super + N     |             |                                    |                       |
 | [x]         | Super + O     | Octave      | octave --gui                       |                       |
