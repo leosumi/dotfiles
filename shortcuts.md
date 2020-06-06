@@ -22,7 +22,7 @@ To use the preferred applications, it is better to use the `exo-open` command.
 | [x]         | Super + G     | GIMP        | gimp                               | Geogebra              |
 | [ ]         | Super + H     |             |                                    |                       |
 | [x]         | Super + I     | Inkscape    | inkscape                           |                       |
-| [x]         | Super + J     | Jabref      | jabref, /opt/jabref/bin/JabRef     |                       |
+| [x]         | Super + J     | Jabref      | /opt/jabref/bin/JabRef, JabRef     |                       |
 | [x]         | Super + K     | Keepassxc   | keepassxc                          | Krita                 |
 | [x]         | Super + L     | Lock        | xflock4                            |                       |
 | [x]         | Super + M     | Mail reader | exo-open --launch MailReader       |                       |
