@@ -50,6 +50,7 @@ d,a,vera++
 d,p,astyle
 
 # Java
+d,,default-jdk
 ,p,jdk-openjdk
 
 # LaTex
