@@ -1,0 +1,63 @@
+Tag,Name,Description
+,xcape,to make caps lock rock
+,xdotool,a command-line X11 automation tool
+,wmctrl,to manage windows from the command line
+,rofi,an application launcher
+,redshift,to red shift the display
+,firefox,a web browser
+,system-config-printer,to config the printer
+,gnome-disk-utility,a disk utility
+,git,a version control system
+,vim,a text editor
+,neovim,a text editor
+,tmux,a terminal multiplexer
+,ctags,a tag system
+,gcc,a compiler
+,cmake,a build generator
+,doxygen,a doc generator
+,gdb,a debugger
+,valgrind,a memory leak finder
+,cppcheck,a static code analyser
+a,vera++,an analysis tool
+,astyle,an indentation and reformatting filter
+,jdk-openjdk,a java dev kit
+,texlive-most,a LaTeX system
+,texlive-lang,a LaTeX extension
+,texmaker,a LaTeX editor
+a,jabref,a bibliography manager
+,zathura,a PDF viewer
+,zathura-pdf-mupdf,a zathura extension
+,pdftk,a tool to work with PDF
+,pdfgrep,a tool to grep into PDF
+,task,a task manager
+,calcurse,a calendar
+,sxiv,a suckless imange viewer
+a,sent,a suckless slide show
+,r,the R language
+a,rstudio-desktop-bin,an R IDE
+,python-pip,a python package manager
+,shellcheck,a shell script checker
+,geogebra,a mathematic tool
+,octave,the octave language
+,ranger,a file manager
+,htop,a top replacement
+,curl,a tool to download webpages
+,tree,a file tree generator
+,pandoc,a universal markup converter
+,unzip,a tool to unzip
+,unrar,a tool to unrar
+,flac,an audio codec for lossless compression
+,youtube-dl,a tool to download video
+,cmus,a music player
+,keepassxc,a password manager
+,newsboat,an RSS fetcher
+,gimp,an image manipulation tool
+,krita,an digital drawing tool
+,inkscape,a vector drawing tool
+,blender,a 3D modeling tool
+,vlc,a universal multimedia player
+,libreoffice-fresh,an office suite
+,anki,a flash card system
+a,freeplane,a mind map drawing tool
+,languagetool,a proofreading tool
+,grammalecte,a french proofreading tool

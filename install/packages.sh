@@ -1,10 +1,9 @@
 #!/bin/sh
-# packages.sh -- installation of packages from packages.list
+# packages.sh -- installation of packages from packages.csv
 # By Léo Sumi
 
-packages_file="packages.list"
+packages_file="packages.csv"
 log_file="packages.log"
-snap_system="true"
 
 help_msg()
 {
@@ -36,45 +35,9 @@ error()
     echo_red "ERROR: $1" | tee -a $log_file
 }
 
-debcheck()
+pkgcheck()
 {
-    msg "Checking if $1 deb package exists"
-    apt-cache show $1 > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        warning "$1 does not exist"
-	    return 1
-    fi
-}
-
-debinstall()
-{
-    if debcheck $1; then
-        msg "Installing $1 deb package"
-        sudo apt-get install --assume-yes $1 2>&1 | tee -a $log_file
-    fi
-}
-
-snapcheck()
-{
-    msg "Checking if $1 snap package exists"
-    snap info $1 > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        warning "$1 does not exist"
-	    return 1
-    fi
-}
-
-snapinstall()
-{
-    if snapcheck $1; then
-        msg "Installing $1 snap package"
-        sudo snap install $1 2>&1 | tee -a $log_file
-    fi
-}
-
-pacmancheck()
-{
-    msg "Checking if $1 package exists"
+    msg "Checking if $1 package exists -- $2"
     pacman -Si $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         # Package could be a group
@@ -87,17 +50,17 @@ pacmancheck()
     fi
 }
 
-pacmaninstall()
+pkginstall()
 {
-    if pacmancheck $1; then
-        msg "Installing $1 package"
+    if pkgcheck $1; then
+        msg "Installing $1 package -- $2"
         sudo pacman --noconfirm -S $1 2>&1 | tee -a $log_file
     fi
 }
 
 aurcheck()
 {
-    msg "Checking if $1 package exists in AUR"
+    msg "AUR: Checking if $1 package exists -- $2"
     yay -Si $1 > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         warning "$1 does not exist"
@@ -108,96 +71,33 @@ aurcheck()
 aurinstall()
 {
     if aurcheck $1; then
-        msg "Installing $1 package from AUR"
+        msg "AUR: Installing $1 package -- $2"
         yay --noconfirm -S $1 2>&1 | tee -a $log_file
     fi
-}
-
-ubuntu_check()
-{
-    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
-        case $ubuntu_tag in
-            "d") debcheck $package ;;
-            "s") snapcheck $package ;;
-            "") continue ;;
-            *) error "Invalid ubuntu tag in $packages_file" ;;
-        esac
-    done
-}
-
-ubuntu_install()
-{
-    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
-        case $ubuntu_tag in
-            "d") debinstall $package ;;
-            "s") snapinstall $package ;;
-            "") continue ;;
-            *) error "Invalid ubuntu tag in $packages_file" ;;
-        esac
-    done
-}
-
-manjaro_check()
-{
-    # Check for snap support
-    snap > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        warning "snap packages are not supported, install snapd"
-    fi
-
-    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
-        case $manjaro_tag in
-            "p") pacmancheck $package ;;
-            "a") aurcheck $package ;;
-            "s") snapcheck $package ;;
-            "") continue ;;
-            *) error "Invalid manjaro tag in $packages_file" ;;
-        esac
-    done
-}
-
-manjaro_install()
-{
-    # Enable snap support
-    snap > /dev/null 2>&1
-    if [ $? -ne 0 && $snap_system = "true" ]; then
-        aurinstall snapd
-        sudo systemctl enable --now snapd.socket
-    fi
-
-    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read ubuntu_tag manjaro_tag package ; do
-        case $manjaro_tag in
-            "p") pacmaninstall $package ;;
-            "a") aurinstall $package ;;
-            "s") snapinstall $package ;;
-            "") continue ;;
-            *) error "Invalid manjaro tag in $packages_file" ;;
-        esac
-    done
 }
 
 check()
 {
     echo "Checking packages list"
     echo "======================"
-    current_distribution=`lsb_release --short --id`
-    case "$current_distribution" in
-        "Ubuntu") ubuntu_check ;;
-        "ManjaroLinux") manjaro_check ;;
-        *) error "Your distribution is not compatible" ;;
-    esac
+    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read tag pkg description ; do
+        case $tag in
+            "a") aurinstall $pkg $description ;;
+            *) pkginstall $pkg $description ;;
+        esac
+    done
 }
 
 install()
 {
     echo "Installation"
     echo "============"
-    current_distribution=`lsb_release --short --id`
-    case "$current_distribution" in
-        "Ubuntu") ubuntu_install ;;
-        "ManjaroLinux") manjaro_install ;;
-        *) error "Your distribution is not compatible" ;;
-    esac
+    sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read tag pkg description ; do
+        case $tag in
+            "a") aurcheck $pkg $description ;;
+            *) pkgcheck $pkg $description ;;
+        esac
+    done
 }
 
 # execution
@@ -207,7 +107,6 @@ if [ -z "$1" ]; then
     help_msg
     exit
 fi
-
 
 if [ "$1" = "--check" ]; then
     check
