@@ -19,6 +19,9 @@ export LC_MEASUREMENT="fr_CH.UTF-8"
 export LC_IDENTIFICATION="fr_CH.UTF-8"
 #export LC_ALL=
 
+# ~/ clean-up
+export LESSHISTFILE="-"
+
 # solve the 256 color madness
 export TERM="xterm-256color"
 [ -n "$TMUX" ] && export TERM="screen-256color"
