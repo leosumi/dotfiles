@@ -82,8 +82,8 @@ check()
     echo "======================"
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read tag pkg description ; do
         case $tag in
-            "a") aurinstall $pkg $description ;;
-            *) pkginstall $pkg $description ;;
+            "a") aurcheck $pkg "$description" ;;
+            *) pkgcheck $pkg "$description" ;;
         esac
     done
 }
@@ -94,8 +94,8 @@ install()
     echo "============"
     sed "s/\s*#.*//g; /^\s*$/ d" $packages_file | while IFS=, read tag pkg description ; do
         case $tag in
-            "a") aurcheck $pkg $description ;;
-            *) pkgcheck $pkg $description ;;
+            "a") aurinstall $pkg "$description" ;;
+            *) pkginstall $pkg "$description" ;;
         esac
     done
 }

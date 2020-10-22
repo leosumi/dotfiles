@@ -1,4 +1,4 @@
-Tag,Name,Description
+# Tag,Name,Description
 ,xcape,to make caps lock rock
 ,xdotool,a command-line X11 automation tool
 ,wmctrl,to manage windows from the command line
