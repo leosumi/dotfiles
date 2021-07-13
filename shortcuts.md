@@ -1,5 +1,7 @@
 # Keyboard shortcuts
 
+## Applications
+
 In XFCE, the key bindings can be changed using the `xfce4-keyboard-settings` application.
 
 To use the preferred applications, it is better to use the `exo-open` command.
@@ -39,3 +41,68 @@ To use the preferred applications, it is better to use the `exo-open` command.
 | [ ]         | Super + X     |             |                                    |                       |
 | [ ]         | Super + Y     |             |                                    |                       |
 | [ ]         | Super + Z     |             |                                    |                       |
+
+# Window manager actions
+
+In XFCE, the following key bindings can be changed using the `xfwm4-settings` application.
+
+| Implemented | Action                             | Shortcut              |
+| ----------- | ------                             | --------              |
+| [ ]         | Window operations menu             |                       |
+| [x]         | Up                                 | Up                    |
+| [x]         | Down                               | Down                  |
+| [x]         | Left                               | Left                  |
+| [x]         | Right                              | Right                 |
+| [x]         | Cancel                             | Escape                |
+| [x]         | Cycle windows                      | Super + Tab           |
+| [ ]         | Cycle window (Reverse)             |                       |
+| [ ]         | Switch window for same application |                       |
+| [ ]         | Switch application                 |                       |
+| [x]         | Close window                       | Alt + F4              |
+| [ ]         | Maximize window horizontally       |                       |
+| [ ]         | Maximize window vertically         |                       |
+| [x]         | Maximize window                    | Super + Up            |
+| [x]         | Hide window                        | Super + down          |
+| [ ]         | Move window                        |                       |
+| [ ]         | Resize window                      |                       |
+| [ ]         | Shade window                       |                       |
+| [ ]         | Stick window                       |                       |
+| [ ]         | Raise window                       |                       |
+| [ ]         | Lower window                       |                       |
+| [ ]         | Raise or lower window              |                       |
+| [ ]         | Fill window                        |                       |
+| [ ]         | Fill window horizontally           |                       |
+| [ ]         | Fill window vertically             |                       |
+| [ ]         | Toggle above                       |                       |
+| [ ]         | Toggle fullscreen                  |                       |
+| [ ]         | Move window to upper workspace     |                       |
+| [ ]         | Move window to bottom workspace    |                       |
+| [ ]         | Move window to left workspace      |                       |
+| [ ]         | Move window to right workspace     |                       |
+| [ ]         | Move window to previous workspace  |                       |
+| [ ]         | Move window to next workspace      |                       |
+| [x]         | Move window to workspace 1 to 12   | Super + Alt + 1-9     |
+| [ ]         | Tile window to the top             |                       |
+| [ ]         | Tile window to the bottom          |                       |
+| [x]         | Tile window to the left            | Super + Left          |
+| [x]         | Tile window to the right           | Super + Right         |
+| [x]         | Tile window to the top-left        | Super + Shift + Left  |
+| [x]         | Tile window to the top-right       | Super + Shift + Right |
+| [x]         | Tile window to the bottom-left     | Super + Ctrl + Left   |
+| [x]         | Tile window to the bottom-right    | Super + Ctrl + Right  |
+| [ ]         | Show desktop                       |                       |
+| [ ]         | Upper workspace                    |                       |
+| [ ]         | Bottom workspace                   |                       |
+| [x]         | Left workspace                     | Super + Alt + Left    |
+| [x]         | Right workspace                    | Super + Alt + Right   |
+| [ ]         | Previous workspace                 |                       |
+| [ ]         | Next workspace                     |                       |
+| [x]         | Workspace 1 to 12                  | Super + 1-9           |
+| [x]         | Add workspace                      | Super + Insert        |
+| [ ]         | Add adjacent workspace             |                       |
+| [x]         | Delete last workspace              | Super + Delete        |
+| [ ]         | Delete active workspace            |                       |
+
+## Settings Editor
+
+Change xfwm4 / easy_click to Super
