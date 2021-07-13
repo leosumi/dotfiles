@@ -5,6 +5,7 @@
 ,rofi,an application launcher
 ,redshift,to red shift the display
 ,firefox,a web browser
+,manjaro-printer,to support printing
 ,system-config-printer,to config the printer
 ,gnome-disk-utility,a disk utility
 ,git,a version control system
@@ -20,7 +21,9 @@
 ,cppcheck,a static code analyser
 a,vera++,an analysis tool
 ,astyle,an indentation and reformatting filter
+,cloc,a line of code counter
 ,jdk-openjdk,a java dev kit
+a,eclipse-java-bin,a java IDE
 ,texlive-most,a LaTeX system
 ,texlive-lang,a LaTeX extension
 ,texmaker,a LaTeX editor
@@ -61,3 +64,6 @@ a,rstudio-desktop-bin,an R IDE
 a,freeplane,a mind map drawing tool
 ,languagetool,a proofreading tool
 ,grammalecte,a french proofreading tool
+a,google-earth-pro,a 3D interractive Earth viewer
+,wine,a compatibility layer for Windows
+,winetricks,allows modification to wine
