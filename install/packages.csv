@@ -8,6 +8,7 @@
 ,manjaro-printer,to support printing
 ,system-config-printer,to config the printer
 ,gnome-disk-utility,a disk utility
+,baobab,a graphical directory tree analyzer
 ,git,a version control system
 ,vim,a text editor
 ,neovim,a text editor
@@ -39,6 +40,7 @@ a,sent,a suckless slide show
 ,r,the R language
 a,rstudio-desktop-bin,an R IDE
 ,python-pip,a python package manager
+a,anaconda,a python distribution
 ,shellcheck,a shell script checker
 ,geogebra,a mathematic tool
 ,octave,the octave language
