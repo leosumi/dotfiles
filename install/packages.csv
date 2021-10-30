@@ -1,7 +1,15 @@
 # Tag,Name,Description
+,base-devel,group of base dev packages
+,yay,an AUR helper
+,noto-fonts,the Noto TTF fonts
+,noto-fonts-cjk,the Noto TTF fonts
+,noto-fonts-emoji,the Noto TTF fonts
+,noto-fonts-extra,the Noto TTF fonts
 ,xcape,to make caps lock rock
 ,xdotool,a command-line X11 automation tool
+,mlocate,the locate and updatedb tools
 ,wmctrl,to manage windows from the command line
+,wireless_tools,to manipulate the wireless networks
 ,rofi,an application launcher
 ,redshift,to red shift the display
 ,firefox,a web browser
