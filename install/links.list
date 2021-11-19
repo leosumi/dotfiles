@@ -12,3 +12,4 @@ $DOTFILES_DIR/music/abcde.conf $HOME/.abcde.conf
 
 $DOTFILES_DIR/bin/tm $HOME/bin/tm
 $DOTFILES_DIR/bin/start $HOME/bin/start
+$DOTFILES_DIR/bin/version $HOME/bin/version

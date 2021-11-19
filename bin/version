@@ -1,0 +1,27 @@
+#! /bin/sh
+
+pacman -Q manjaro-release
+pacman -Q linux514
+pacman -Q bash
+pacman -Q xfwm4
+pacman -Q gcc
+pacman -Q clang
+pacman -Q cmake
+pacman -Q jdk-openjdk
+pacman -Q python
+pacman -Q r
+pacman -Q octave
+pacman -Q vim
+pacman -Q neovim
+pacman -Q tmux
+pacman -Q texlive-bin
+pacman -Q pandoc
+pacman -Q firefox
+pacman -Q thunderbird
+pacman -Q libreoffice
+pacman -Q vlc
+pacman -Q gimp
+pacman -Q krita
+pacman -Q inkscape
+pacman -Q blender
+pacman -Q wine
