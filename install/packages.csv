@@ -47,7 +47,9 @@ a,jabref,a bibliography manager
 a,sent,a suckless slide show
 ,r,the R language
 a,rstudio-desktop-bin,an R IDE
+,python,the Python language
 ,python-pip,a python package manager
+,python-pywal,a colorscheme generator
 #a,anaconda,a python distribution
 ,shellcheck,a shell script checker
 ,geogebra,a mathematic tool
