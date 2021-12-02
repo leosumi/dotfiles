@@ -58,6 +58,17 @@ export LC_MEASUREMENT="fr_CH.UTF-8"
 export LC_IDENTIFICATION="fr_CH.UTF-8"
 #export LC_ALL=
 
+# XDG Base Directory
+# Based on version 0.8 of the specification (08 May 2021)
+# The variables are set to the default to avoid issue due to unset environment variables
+# Only user directories are set
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+#export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
+#export XDG_CONFIG_DIRS=/etc/xdg
+
 # ~/ clean-up
 export LESSHISTFILE="-"
 
