@@ -65,6 +65,13 @@ export LESSHISTFILE="-"
 setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Caps_Lock=Escape'
 
+# Aliases
+# tmux aliases
+alias tns='tmux new-session -s'
+alias ta='tmux attach'
+alias tat='tmux attach -t'
+alias tls='tmux ls'
+
 # wal configuration
 # Applying the theme to new terminals
 # Import colorscheme from 'wal' asynchronously
