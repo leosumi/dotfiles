@@ -70,7 +70,8 @@ export XDG_CACHE_HOME=$HOME/.cache
 #export XDG_CONFIG_DIRS=/etc/xdg
 
 # ~/ clean-up
-export LESSHISTFILE="-"
+# Check https://wiki.archlinux.org/title/XDG_Base_Directory
+#export LESSHISTFILE="-"
 
 # let's make caps lock rock : use caps lock as ctrl AND esc
 setxkbmap -option 'caps:ctrl_modifier'
