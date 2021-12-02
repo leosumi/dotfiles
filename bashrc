@@ -37,10 +37,6 @@ complete -F _cheatsh_complete_curl cheat
 # enable bash completion with pandoc
 eval "$(pandoc --bash-completion)"
 
-# Install Ruby Gems to gems in my home
-export GEM_HOME=$HOME/gems
-export PATH=$HOME/gems/bin:$PATH
-
 # Add local pip to PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
