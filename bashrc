@@ -37,8 +37,9 @@ complete -F _cheatsh_complete_curl cheat
 # enable bash completion with pandoc
 eval "$(pandoc --bash-completion)"
 
-# Add local pip to PATH
-export PATH="${PATH}:${HOME}/.local/bin/"
+# PATH variable
+PATH=$PATH:~/bin
+export PATH
 
 # locale configuration
 export LANG="en_US.UTF-8"
