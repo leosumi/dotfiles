@@ -16,6 +16,7 @@ pacman -Q neovim
 pacman -Q tmux
 pacman -Q texlive-bin
 pacman -Q pandoc
+pacman -Q jabref
 pacman -Q firefox
 pacman -Q thunderbird
 pacman -Q libreoffice
