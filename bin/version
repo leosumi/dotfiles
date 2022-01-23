@@ -1,7 +1,7 @@
 #! /bin/sh
 
 pacman -Q manjaro-release
-pacman -Q linux515
+pacman -Q linux516
 pacman -Q bash
 pacman -Q xfwm4
 pacman -Q gcc
