@@ -1,0 +1,16 @@
+In /usr/share/xfce4/terminal/colorschemes/file.theme
+
+In file.theme
+
+[Scheme]
+Name=
+ColorForeground=
+ColorBackground=
+ColorCursor=
+TabActivityColor=
+ColorPalette=
+
+String do not need " "
+ColorPalette takes 16 color values separated by ;
+
+can use #xxxxxx or rgb(x,x,x)
