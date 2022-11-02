@@ -69,6 +69,9 @@ export XDG_CACHE_HOME=$HOME/.cache
 #export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 #export XDG_CONFIG_DIRS=/etc/xdg
 
+# Editor
+export EDITOR=/usr/bin/nvim
+
 # ~/ clean-up
 # Check https://wiki.archlinux.org/title/XDG_Base_Directory
 #export LESSHISTFILE="-"
