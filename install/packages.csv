@@ -5,6 +5,7 @@
 ,noto-fonts-cjk,the Noto TTF fonts
 ,noto-fonts-emoji,the Noto TTF fonts
 ,noto-fonts-extra,the Noto TTF fonts
+a,nerd-fonts-complete,all devicons
 ,xcape,to make caps lock rock
 ,xdotool,a command-line X11 automation tool
 ,mlocate,the locate and updatedb tools
@@ -20,8 +21,13 @@
 ,git,a version control system
 ,vim,a text editor
 ,neovim,a text editor
+,clang,for clangd, a C/C++ language server (LSP)
+,lua-language-server,a lua language server (LSP)
+a,marksman-bin,a markdown language server (LSP)
+a,ltext-ls-bin,a LanguageTool language server (LSP)
 ,tmux,a terminal multiplexer
 ,ctags,a tag system
+,ripgrep,a better grep
 ,gcc,a compiler
 ,cmake,a build generator
 ,doxygen,a doc generator
@@ -44,9 +50,9 @@ a,jabref,a bibliography manager
 ,task,a task manager
 ,calcurse,a calendar
 ,sxiv,a suckless imange viewer
-a,sent,a suckless slide show
+#a,sent,a suckless slide show
 ,r,the R language
-a,rstudio-desktop-bin,an R IDE
+a,rstudio-desktop,an R IDE
 ,python,the Python language
 ,python-pip,a python package manager
 ,python-pywal,a colorscheme generator
@@ -72,7 +78,7 @@ a,rstudio-desktop-bin,an R IDE
 ,blender,a 3D modeling tool
 ,vlc,a universal multimedia player
 ,libreoffice-fresh,an office suite
-a,anki-official-binary-bundle,a flash card system
+a,anki,a flash card system
 a,freeplane,a mind map drawing tool
 ,languagetool,a proofreading tool
 ,grammalecte,a french proofreading tool
