@@ -28,11 +28,11 @@ To use the preferred applications, it is better to use the `exo-open` command.
 | [x]         | Super + K     | Keepassxc   | keepassxc                          | Krita                 |
 | [x]         | Super + L     | Lock        | xflock4                            | LibreOffice           |
 | [x]         | Super + M     | Mail reader | exo-open --launch MailReader       |                       |
-| [ ]         | Super + N     |             |                                    |                       |
+| [x]         | Super + N     | Note taking | obsidian                           |                       |
 | [x]         | Super + O     | Octave      | octave --gui                       |                       |
 | [ ]         | Super + P     |             |                                    | Power off             |
 | [ ]         | Super + Q     |             |                                    |                       |
-| [x]         | Super + R     | Rstudio     | rstudio, rstudio-bin               |                       |
+| [x]         | Super + R     | Rstudio     | rstudio                            |                       |
 | [x]         | Super + S     | Settings    | xfce4-settings-manager             |                       |
 | [x]         | Super + T     | Terminal    | exo-open --launch TerminalEmulator |                       |
 | [ ]         | Super + U     |             |                                    | Update                |
