@@ -9,6 +9,7 @@ hosts_dl="/tmp/new-hosts"
 whitelist()
 {
     sudo sed -i '/^# Reddit$/,/^$/d' $hosts
+    sudo sed -i '/^# LinkedIn$/,/^$/d' $hosts
 }
 
 # Save the original hosts file (Do not delete it)
