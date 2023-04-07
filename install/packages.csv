@@ -1,11 +1,12 @@
 # Tag,Name,Description
 ,base-devel,group of base dev packages
 ,yay,an AUR helper
+,alacritty,a terminal emulator
 ,noto-fonts,the Noto TTF fonts
 ,noto-fonts-cjk,the Noto TTF fonts
 ,noto-fonts-emoji,the Noto TTF fonts
 ,noto-fonts-extra,the Noto TTF fonts
-a,nerd-fonts-complete,all devicons
+,ttf-hack-nerd,the Hack font patched
 ,xcape,to make caps lock rock
 ,xdotool,a command-line X11 automation tool
 ,mlocate,the locate and updatedb tools
@@ -23,8 +24,6 @@ a,nerd-fonts-complete,all devicons
 ,neovim,a text editor
 ,clang,for clangd, a C/C++ language server (LSP)
 ,lua-language-server,a lua language server (LSP)
-a,marksman-bin,a markdown language server (LSP)
-a,ltext-ls-bin,a LanguageTool language server (LSP)
 ,tmux,a terminal multiplexer
 ,ctags,a tag system
 ,ripgrep,a better grep
@@ -56,6 +55,8 @@ a,rstudio-desktop,an R IDE
 ,python,the Python language
 ,python-pip,a python package manager
 ,python-pywal,a colorscheme generator
+,python-numpy,
+,python-matplotlib,
 #a,anaconda,a python distribution
 ,shellcheck,a shell script checker
 ,geogebra,a mathematic tool
