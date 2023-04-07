@@ -1,7 +1,8 @@
 #! /bin/sh
 
 pacman -Q manjaro-release
-pacman -Q linux60
+pacman -Q linux62
+pacman -Q mesa
 pacman -Q bash
 pacman -Q xfwm4
 pacman -Q gcc
@@ -20,6 +21,7 @@ pacman -Q jabref
 pacman -Q firefox
 pacman -Q thunderbird
 pacman -Q libreoffice
+pacman -Q onlyoffice-desktopeditors
 pacman -Q vlc
 pacman -Q gimp
 pacman -Q krita
