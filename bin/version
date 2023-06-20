@@ -12,7 +12,6 @@ pacman -Q jdk-openjdk
 pacman -Q python
 pacman -Q r
 pacman -Q octave
-pacman -Q vim
 pacman -Q neovim
 pacman -Q tmux
 pacman -Q texlive-bin
