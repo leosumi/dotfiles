@@ -20,7 +20,7 @@
 ,gnome-disk-utility,a disk utility
 ,baobab,a graphical directory tree analyzer
 ,git,a version control system
-,vim,a text editor
+#,vim,a text editor
 ,neovim,a text editor
 ,clang,for clangd, a C/C++ language server (LSP)
 ,lua-language-server,a lua language server (LSP)
