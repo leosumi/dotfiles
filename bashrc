@@ -87,6 +87,8 @@ alias ta='tmux attach'
 alias tat='tmux attach -t'
 alias tls='tmux ls'
 
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
 # wal configuration
 # Applying the theme to new terminals
 # Import colorscheme from 'wal' asynchronously
