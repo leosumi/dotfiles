@@ -1,8 +1,10 @@
 #! /bin/sh
 
 pacman -Q manjaro-release
-pacman -Q linux63
+pacman -Q linux66
+pacman -Q systemd
 pacman -Q mesa
+pacman -Q pipewire
 pacman -Q bash
 pacman -Q xfwm4
 pacman -Q gcc
