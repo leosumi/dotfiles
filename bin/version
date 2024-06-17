@@ -1,12 +1,16 @@
 #! /bin/sh
 
 pacman -Q manjaro-release
-pacman -Q linux66
+pacman -Q linux69
 pacman -Q systemd
 pacman -Q mesa
 pacman -Q pipewire
-pacman -Q bash
+pacman -Q sddm
 pacman -Q xfwm4
+pacman -Q hyprland
+pacman -Q alacritty
+pacman -Q bash
+pacman -Q pacman
 pacman -Q gcc
 pacman -Q clang
 pacman -Q cmake
