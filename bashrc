@@ -73,8 +73,24 @@ export XDG_CACHE_HOME=$HOME/.cache
 export EDITOR=/usr/bin/nvim
 
 # ~/ clean-up
+# Use xdg-ninja for help
 # Check https://wiki.archlinux.org/title/XDG_Base_Directory
-#export LESSHISTFILE="-"
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export LESSHISTFILE="$XDG_STATE_HOME"/less/history
+export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
 
 # let's make caps lock rock : use caps lock as ctrl AND esc
 setxkbmap -option 'caps:ctrl_modifier'
