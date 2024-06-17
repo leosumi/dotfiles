@@ -2,17 +2,21 @@
 ,base-devel,group of base dev packages
 ,yay,an AUR helper
 ,alacritty,a terminal emulator
+,fastfetch,a fetch alternative
 ,noto-fonts,the Noto TTF fonts
 ,noto-fonts-cjk,the Noto TTF fonts
 ,noto-fonts-emoji,the Noto TTF fonts
 ,noto-fonts-extra,the Noto TTF fonts
 ,ttf-hack-nerd,the Hack font patched
-,xcape,to make caps lock rock
+#,xcape,to make caps lock rock
+,interception-caps2esc,to make caps lock rock
 ,xdotool,a command-line X11 automation tool
 ,mlocate,the locate and updatedb tools
 ,wmctrl,to manage windows from the command line
 ,wireless_tools,to manipulate the wireless networks
 ,rofi,an application launcher
+,rofi-emoji,the emoji plugin
+,rofi-calc,the calc plugin
 ,redshift,to red shift the display
 ,firefox,a web browser
 ,manjaro-printer,to support printing
@@ -35,6 +39,7 @@
 ,cppcheck,a static code analyser
 a,vera++,an analysis tool
 ,astyle,an indentation and reformatting filter
+,rust,the rust programming language
 ,cloc,a line of code counter
 ,jdk-openjdk,a java dev kit
 a,eclipse-java,a java IDE
@@ -54,6 +59,7 @@ a,jabref,a bibliography manager
 a,rstudio-desktop,an R IDE
 ,python,the Python language
 ,python-pip,a python package manager
+,python-pipx,a python package manager for end-user applications
 ,python-pywal,a colorscheme generator
 ,python-numpy,
 ,python-matplotlib,
@@ -69,7 +75,7 @@ a,rstudio-desktop,an R IDE
 ,unzip,a tool to unzip
 ,unrar,a tool to unrar
 ,flac,an audio codec for lossless compression
-,youtube-dl,a tool to download video
+,yt-dlp,a tool to download video
 ,cmus,a music player
 ,keepassxc,a password manager
 ,newsboat,an RSS fetcher
