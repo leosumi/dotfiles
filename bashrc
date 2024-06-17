@@ -93,8 +93,13 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 
 
 # let's make caps lock rock : use caps lock as ctrl AND esc
-setxkbmap -option 'caps:ctrl_modifier'
-xcape -e 'Caps_Lock=Escape'
+# Use caps2esc, it is more system wide
+# See: Remap Caps Lock to Escape and Control by ejmastnak
+# https://ejmastnak.com/tutorials/arch/caps2esc/
+#
+# DEPRECATED
+#setxkbmap -option 'caps:ctrl_modifier'
+#xcape -e 'Caps_Lock=Escape' -t 100
 
 # Aliases
 # tmux aliases
