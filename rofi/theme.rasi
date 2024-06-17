@@ -1,0 +1,34 @@
+* {
+    background-color: transparent;
+    font: "JetBrainsMono Nerd Font 16";
+    text-color: rgba(216, 216, 216, 100%);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+}
+
+mainbox {
+    background-color: rgba(24, 24, 24, 80%);
+}
+
+listview {
+    lines: 10;
+}
+
+element {
+    padding: 5 10;
+}
+
+element selected {
+    background-color: rgba(24, 24, 24, 50%);
+}
+
+element-icon {
+    size: 24;
+    padding: 0 10 0 0;
+}
