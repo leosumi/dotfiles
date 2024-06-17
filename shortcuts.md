@@ -75,6 +75,10 @@ In XFCE, the following key bindings can be changed using the `xfwm4-settings` ap
 | [ ]         | Fill window vertically             |                       |
 | [ ]         | Toggle above                       |                       |
 | [ ]         | Toggle fullscreen                  |                       |
+| [ ]         | Move window to lower monitor       |                       |
+| [ ]         | Move window to left monitor        |                       |
+| [ ]         | Move window to right monitor       |                       |
+| [ ]         | Move window to upper monitor       |                       |
 | [ ]         | Move window to upper workspace     |                       |
 | [ ]         | Move window to bottom workspace    |                       |
 | [ ]         | Move window to left workspace      |                       |
