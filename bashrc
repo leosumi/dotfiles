@@ -108,7 +108,9 @@ alias ta='tmux attach'
 alias tat='tmux attach -t'
 alias tls='tmux ls'
 
+alias nvim-default="NVIM_APPNAME=default nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 
 # wal configuration
 # Applying the theme to new terminals
