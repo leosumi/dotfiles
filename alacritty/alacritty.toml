@@ -1,0 +1,25 @@
+import = [
+    "~/.config/alacritty/alacritty-theme/themes/nord.toml"
+]
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMono NF"
+
+[window]
+decorations = "none"
+opacity = 0.8
+blur = true
+
+[window.dimensions]
+columns = 80
+lines = 24
+
+[window.padding]
+x = 2
+y = 2
+
+[selection]
+save_to_clipboard = true
