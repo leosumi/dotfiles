@@ -42,7 +42,7 @@ a,vera++,an analysis tool
 ,rust,the rust programming language
 ,cloc,a line of code counter
 ,jdk-openjdk,a java dev kit
-a,eclipse-java,a java IDE
+a,eclipse-java-bin,a java IDE
 ,texlive-most,a LaTeX system
 ,texlive-lang,a LaTeX extension
 ,texmaker,a LaTeX editor
@@ -91,3 +91,4 @@ a,freeplane,a mind map drawing tool
 ,grammalecte,a french proofreading tool
 a,proselint,a linter for prose
 a,google-earth-pro,a 3D interractive Earth viewer
+a,pika-backup,a backup tool
